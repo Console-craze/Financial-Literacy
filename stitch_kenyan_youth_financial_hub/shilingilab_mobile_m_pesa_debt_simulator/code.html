@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed-dim": "#4edea3", "surface-dim": "#d1ddd2", "on-error-container": "#93000a", "primary-fixed-dim": "#9ad3ad", "primary-container": "#0d472b", "error": "#ba1a1a", "on-primary-fixed": "#002110", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#7f2b00", "secondary": "#006c49", "surface-container-lowest": "#ffffff", "inverse-surface": "#29332b", "surface-variant": "#dae6da", "on-secondary-container": "#00714d", "on-background": "#141e17", "surface-container": "#e5f1e5", "surface-tint": "#33694a", "secondary-fixed": "#6ffbbe", "on-tertiary-container": "#ff8856", "background": "#f1fcf1", "surface-container-highest": "#dae6da", "surface-container-low": "#ebf7eb", "surface-bright": "#f1fcf1", "on-tertiary-fixed": "#370e00", "tertiary-container": "#702500", "inverse-primary": "#9ad3ad", "tertiary-fixed-dim": "#ffb598", "on-tertiary": "#ffffff", "on-secondary-fixed": "#002113", "tertiary-fixed": "#ffdbce", "on-surface-variant": "#414942", "secondary-container": "#6cf8bb", "outline": "#717972", "tertiary": "#4c1700", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#005236", "on-secondary": "#ffffff", "surface": "#f1fcf1", "inverse-on-surface": "#e8f4e8", "on-primary-fixed-variant": "#195033", "primary-fixed": "#b6f0c8", "surface-container-high": "#e0ebe0", "on-primary": "#ffffff", "on-surface": "#141e17", "outline-variant": "#c0c9c0", "on-primary-container": "#7db591", "primary": "#002f19" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-desktop": "1.5rem", "margin-tablet": "2rem", "margin-desktop": "3rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1rem", "margin": "1rem" }, "fontFamily": { "headline-md": ["Sora"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Sora"], "headline-lg-mobile": ["Sora"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-mobile": ["Sora"], "label-md": ["Plus Jakarta Sans"], "display": ["Sora"], "headline-lg": ["Sora"] }, "fontSize": { "headline-md": ["1.5rem", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-md": ["1rem", { "lineHeight": "1.55", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["0.6875rem", { "lineHeight": "1.1", "letterSpacing": "0.06em", "fontWeight": "800" }], "headline-sm": ["1.25rem", { "lineHeight": "1.35", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["0.875rem", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }], "label-lg": ["0.875rem", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-lg": ["1.125rem", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }], "display-mobile": ["2.25rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-md": ["0.75rem", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }], "display": ["3.5rem", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg": ["2.25rem", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f1fcf1;color:#141e17;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="flex items-center gap-1.5 shrink-0"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">bolt</span></div><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-extrabold">ShilingiLab</span></div><span class="rounded-full bg-secondary-container px-2 py-0.5 font-label-sm text-label-sm text-on-secondary-fixed font-black uppercase tracking-wider shrink-0">Teens</span></div><div class="flex items-center gap-space-sm shrink-0"><div class="flex items-center gap-1 bg-surface-container-highest/80 px-2.5 py-1 rounded-full"><span class="font-label-sm text-label-sm text-secondary font-extrabold">KES</span><span class="font-headline-sm text-label-lg text-primary font-bold">850</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin pb-space-xl gap-space-lg">
+<!-- Subhead Micro-Banner -->
+<div class="flex items-center gap-space-xs mt-space-sm bg-surface-container-high px-3 py-1.5 rounded-full w-fit">
+<span class="material-symbols-outlined text-tertiary-container text-[16px]">psychology</span>
+<span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Mental Model #04 · The Frictionless Trap · Nairobi Teen Alpha</span>
+</div>
+<!-- Header Section -->
+<div class="flex flex-col gap-1.5">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight font-extrabold">
+      The M-PESA Friction &amp; Micro-Debt Playground
+    </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Borrowing KES 300 for midnight Instagram bundles feels free until daily tariffs, access cuts, and auto-sweeps quietly drain your next pocket money stash.
+    </p>
+</div>
+<!-- Interactive Simulator Card -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md p-space-md gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block leading-tight">Simulator Controls</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Real-time Safaricom &amp; Fuliza model</span>
+</div>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full uppercase tracking-wider font-extrabold">Live Math</span>
+</div>
+<!-- Amount Selector -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<label class="font-label-md text-label-md text-on-surface font-bold">Transfer Amount</label>
+<span class="font-headline-sm text-headline-sm text-secondary font-extrabold" id="display-amount">KES 850</span>
+</div>
+<div class="grid grid-cols-4 gap-1.5">
+<button class="sim-btn-amount py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md transition-all active:scale-95" data-val="50" onclick="setSimAmount(50)" type="button">50</button>
+<button class="sim-btn-amount py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-95" data-val="850" onclick="setSimAmount(850)" type="button">850</button>
+<button class="sim-btn-amount py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md transition-all active:scale-95" data-val="5000" onclick="setSimAmount(5000)" type="button">5,000</button>
+<button class="sim-btn-amount py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md transition-all active:scale-95" data-val="10000" onclick="setSimAmount(10000)" type="button">10k</button>
+</div>
+</div>
+<!-- Balance Deficit Toggle -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface font-bold">Current M-PESA Wallet Deficit</label>
+<div class="grid grid-cols-3 gap-1.5">
+<button class="sim-btn-deficit p-2 rounded-lg bg-surface-container text-on-surface text-center flex flex-col items-center gap-0.5 transition-all active:scale-95" data-mode="full" onclick="setDeficit('full')" type="button">
+<span class="font-label-sm text-label-sm font-bold">Full Fuliza</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">KES 0 in wallet</span>
+</button>
+<button class="sim-btn-deficit p-2 rounded-lg bg-primary-container text-on-primary text-center flex flex-col items-center gap-0.5 transition-all shadow-sm active:scale-95" data-mode="partial" onclick="setDeficit('partial')" type="button">
+<span class="font-label-sm text-label-sm font-bold">Partial</span>
+<span class="font-label-sm text-label-sm text-primary-fixed">Short KES 450</span>
+</button>
+<button class="sim-btn-deficit p-2 rounded-lg bg-surface-container text-on-surface text-center flex flex-col items-center gap-0.5 transition-all active:scale-95" data-mode="none" onclick="setDeficit('none')" type="button">
+<span class="font-label-sm text-label-sm font-bold">Funded</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">KES 1,000 cash</span>
+</button>
+</div>
+</div>
+<!-- Channel Selector -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface font-bold">Payment Rails / Channel</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="sim-btn-channel flex items-center gap-2 p-2.5 rounded-lg bg-secondary-container text-on-secondary-fixed transition-all" data-chan="send" onclick="setChannel('send')" type="button">
+<span class="material-symbols-outlined text-[18px]">send_to_mobile</span>
+<span class="font-label-md text-label-md font-bold">Send Money</span>
+</button>
+<button class="sim-btn-channel flex items-center gap-2 p-2.5 rounded-lg bg-surface-container text-on-surface transition-all" data-chan="till" onclick="setChannel('till')" type="button">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+<span class="font-label-md text-label-md font-bold">Buy Goods (Till)</span>
+</button>
+<button class="sim-btn-channel flex items-center gap-2 p-2.5 rounded-lg bg-surface-container text-on-surface transition-all" data-chan="paybill" onclick="setChannel('paybill')" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span class="font-label-md text-label-md font-bold">Paybill</span>
+</button>
+<button class="sim-btn-channel flex items-center gap-2 p-2.5 rounded-lg bg-surface-container text-on-surface transition-all" data-chan="agent" onclick="setChannel('agent')" type="button">
+<span class="material-symbols-outlined text-[18px]">point_of_sale</span>
+<span class="font-label-md text-label-md font-bold">Agent Withdraw</span>
+</button>
+</div>
+</div>
+<!-- Days Before Repayment Slider -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<label class="font-label-md text-label-md text-on-surface font-bold">Days Borrowed (Until Top-Up)</label>
+<span class="font-headline-sm text-headline-sm text-tertiary-container font-extrabold" id="display-days">Day 14</span>
+</div>
+<input class="w-full accent-secondary h-2 bg-surface-container rounded-lg cursor-pointer" id="days-slider" max="30" min="1" oninput="updateDays(this.value)" step="1" type="range" value="14"/>
+<div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Day 1 (Quick)</span>
+<span>Day 14 (Allowance)</span>
+<span>Day 30 (Month End)</span>
+</div>
+</div>
+</div>
+<!-- Real Impact Snapshot Card -->
+<div class="flex flex-col bg-surface-container rounded-xl shadow-md p-space-md gap-space-md relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-extrabold uppercase tracking-wider">Real Impact Snapshot</span>
+<span class="font-display-mobile text-display-mobile text-primary tracking-tight font-extrabold" id="total-real-cost">KES 909.63</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">For</span>
+<span class="font-label-md text-label-md text-on-surface font-bold" id="total-base-label">KES 850.00 transfer</span>
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-2 py-0.2 rounded-full font-extrabold" id="friction-pct">+7.0% markup</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">price_check</span>
+</div>
+</div>
+<!-- Line Item Breakdown -->
+<div class="flex flex-col bg-surface-container-lowest rounded-lg p-3 gap-2 shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Line-Item Friction Breakdown</span>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">credit_card</span> Principal Overdraft
+        </span>
+<span class="font-label-md text-label-md text-on-surface font-bold" id="break-principal">KES 463.00</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">percent</span> 1.0% Access Fee
+        </span>
+<span class="font-label-md text-label-md text-tertiary font-bold" id="break-access">KES 4.63</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-error">hourglass_bottom</span> Daily Maintenance (14d)
+        </span>
+<span class="font-label-md text-label-md text-error font-bold" id="break-daily">KES 42.00</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">cable</span> Channel Tariff (Transfer)
+        </span>
+<span class="font-label-md text-label-md text-secondary font-bold" id="break-tariff">KES 13.00</span>
+</div>
+<div class="pt-2 mt-1 border-t-0 flex justify-between items-center bg-surface-container-high -mx-3 -mb-3 px-3 py-2 rounded-b-lg">
+<span class="font-label-md text-label-md text-primary font-extrabold uppercase">Pure Friction Cost</span>
+<span class="font-headline-sm text-headline-sm text-error font-extrabold" id="break-friction">KES 59.63</span>
+</div>
+</div>
+</div>
+<!-- 30-Day Sleep Penalty Bar Chart -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md p-space-md gap-3">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">The 30-Day Sleep Penalty</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Daily maintenance accumulates silently each midnight</span>
+</div>
+<span class="material-symbols-outlined text-tertiary-container text-[24px]">bedtime</span>
+</div>
+<!-- Visual Bars -->
+<div class="flex flex-col gap-2.5 pt-2">
+<!-- Day 1 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface font-bold">Day 1 · Instant settlement</span>
+<span class="text-secondary font-extrabold">KES 21.00 fee</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-3 overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 19%;"></div>
+</div>
+</div>
+<!-- Day 7 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface font-bold">Day 7 · End of week</span>
+<span class="text-secondary font-extrabold">KES 39.00 fee</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 36%;"></div>
+</div>
+</div>
+<!-- Day 14 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface font-bold">Day 14 · Mid-month lapse</span>
+<span class="text-tertiary font-extrabold">KES 60.00 fee</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-3 overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 55%;"></div>
+</div>
+</div>
+<!-- Day 30 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface font-bold">Day 30 · Forgotten debt trap</span>
+<span class="text-error font-extrabold">KES 108.00 fee</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-3 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+      At 30 days, the maintenance alone exceeds 25% of the original KES 450 loan amount.
+    </p>
+</div>
+<!-- Street Math Quote Card with Visual Photo -->
+<div class="flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-md">
+<div class="relative w-full h-44 bg-cover bg-center" data-alt="A candid modern street style shot of a Kenyan university student holding an Android phone at a vibrant matatu stage in Nairobi, sunny warm tropical lighting, deep greens and amber highlights" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4FabwRHGBN1verwZaJNkxkZdoL9HVw_NhNRg5PDxlVqITr6Ax6aQ-6OsNqUk-DlLJ_MHQLBjjqRjtHB-v2Mm08U0nflER7o7im4Msf-4DaVTqWVZAjJwC4kdrwvADf-iN3tgT24dNB9wxQLE9KW86Y9X-uM91VY9LMkasVjfJK7GuNaYJ4V5ATKHc-lmEKv9uM8fIfxhJEjELvc8gknhV36Rs2DfVeux0wbQU-d7o')">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent flex flex-col justify-end p-space-md">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase font-extrabold tracking-wider">Street Truth · Campus Stories</span>
+<h3 class="font-headline-sm text-headline-sm text-on-primary font-extrabold leading-snug">
+          “Nilituma Mia Tatu, Nikajipata Sina Pesa ya Mathree.”
+        </h3>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-3">
+<p class="font-body-sm text-body-sm text-on-surface">
+        “I thought borrowing 300 Bob for a quick snack was harmless. The next morning Mum sent 500 for bus fare home and Fuliza automatically swallowed KES 342 before I even got to the stage.”
+        <span class="font-bold block mt-1 text-primary">— Brian K., 19, Strathmore Uni</span>
+</p>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="bg-surface-container-lowest p-2.5 rounded-lg flex flex-col shadow-sm">
+<span class="font-headline-md text-headline-md text-error font-extrabold">78%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Gen Z report Fuliza overdraft at least once a month</span>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg flex flex-col shadow-sm">
+<span class="font-headline-md text-headline-md text-tertiary font-extrabold">18.2%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Average effective 30-day annualized real interest burden</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pedagogical Deep Dives -->
+<div class="flex flex-col gap-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-primary">Pedagogical Deep Dives</h2>
+<!-- Deep Dive 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">visibility_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">1. The Psychology of Invisible Money</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Cash gives you tactile friction: you feel the paper note leave your fingers. When a green prompt simply asks “Fuliza M-PESA? Yes/No”, your brain fails to register that you signed a high-interest legal micro-contract in 1.4 seconds.
+      </p>
+</div>
+<!-- Deep Dive 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">2. The Zero-Balance Hijack Trap</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Fuliza has immediate priority deduction. Any incoming funds (gift from uncle, refund, side hustle gig deposit) are swept instantly before you can access them. You lose liquidity control until the loan ledger reaches zero.
+      </p>
+</div>
+<!-- Deep Dive 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">3. The Tariff Threshold Cliff</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Sending KES 500 costs KES 7, but sending KES 501 jumps into the next Safaricom band costing KES 13. Street-smart youth split or negotiate transactions right beneath band thresholds to preserve pocket margins.
+      </p>
+</div>
+</div>
+<!-- Street Financial IQ Mini-Quiz -->
+<div class="flex flex-col bg-surface-container-highest rounded-xl p-space-md gap-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">quiz</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Street Financial IQ</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tap the smartest play</span>
+</div>
+</div>
+<span class="font-label-md text-label-md bg-surface-container px-2 py-0.5 rounded-full font-bold text-primary" id="quiz-score">0 / 2 Solved</span>
+</div>
+<!-- Question 1 -->
+<div class="flex flex-col gap-2 bg-surface-container-lowest p-3 rounded-lg shadow-sm" id="quiz-q1">
+<span class="font-label-md text-label-md text-on-surface font-bold">Q1: You need KES 480 for school supplies. Your M-PESA has KES 200. What incurs lowest friction?</span>
+<div class="flex flex-col gap-1.5">
+<button class="q-opt w-full text-left p-2.5 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm transition-all hover:bg-surface-variant" onclick="answerQ(1, false, this)" type="button">
+          A) Fuliza the whole KES 480 so you keep KES 200 for snacks.
+        </button>
+<button class="q-opt w-full text-left p-2.5 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm transition-all hover:bg-surface-variant" onclick="answerQ(1, true, this)" type="button">
+          B) Pay the KES 200 first, only overdraft KES 280 to slash daily maintenance.
+        </button>
+<button class="q-opt w-full text-left p-2.5 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm transition-all hover:bg-surface-variant" onclick="answerQ(1, false, this)" type="button">
+          C) Withdraw KES 500 at an agent then pay with cash.
+        </button>
+</div>
+<div class="hidden mt-1 p-2 rounded text-body-sm font-body-sm" id="feedback-q1"></div>
+</div>
+<!-- Question 2 -->
+<div class="flex flex-col gap-2 bg-surface-container-lowest p-3 rounded-lg shadow-sm" id="quiz-q2">
+<span class="font-label-md text-label-md text-on-surface font-bold">Q2: When does Fuliza charge the 1% Access Fee?</span>
+<div class="flex flex-col gap-1.5">
+<button class="q-opt w-full text-left p-2.5 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm transition-all hover:bg-surface-variant" onclick="answerQ(2, true, this)" type="button">
+          A) Instantly the moment the transaction completes.
+        </button>
+<button class="q-opt w-full text-left p-2.5 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm transition-all hover:bg-surface-variant" onclick="answerQ(2, false, this)" type="button">
+          B) Only after 30 days of non-repayment.
+        </button>
+<button class="q-opt w-full text-left p-2.5 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm transition-all hover:bg-surface-variant" onclick="answerQ(2, false, this)" type="button">
+          C) Only if you borrow more than KES 10,000.
+        </button>
+</div>
+<div class="hidden mt-1 p-2 rounded text-body-sm font-body-sm" id="feedback-q2"></div>
+</div>
+</div>
+<!-- Bottom Interactive CTA Pill -->
+<div class="flex items-center justify-between p-space-md bg-primary rounded-xl text-on-primary shadow-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold">Mastered the math?</span>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Earn +50 ShilingiXP in your ledger</span>
+</div>
+<button class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2.5 rounded-lg font-label-lg text-label-lg font-extrabold active:scale-95 transition-all shadow-md" onclick="alert('M-PESA Friction badge logged to your youth ledger!')" type="button">
+      Claim XP
+    </button>
+</div>
+</div>
+<script>
+  let simState = {
+    amount: 850,
+    deficitMode: 'partial',
+    channel: 'send',
+    days: 14
+  };
+
+  const channelTariffs = {
+    send: 13,
+    till: 0,
+    paybill: 15,
+    agent: 29
+  };
+
+  function updateSimulation() {
+    let overdraftPrincipal = 0;
+    if (simState.deficitMode === 'full') {
+      overdraftPrincipal = simState.amount;
+    } else if (simState.deficitMode === 'partial') {
+      overdraftPrincipal = Math.max(0, simState.amount - 387);
+    } else {
+      overdraftPrincipal = 0;
+    }
+
+    let accessFee = overdraftPrincipal > 0 ? overdraftPrincipal * 0.01 : 0;
+
+    let dailyRate = 0;
+    if (overdraftPrincipal > 0) {
+      if (overdraftPrincipal <= 100) dailyRate = 0;
+      else if (overdraftPrincipal <= 500) dailyRate = 2.5;
+      else if (overdraftPrincipal <= 1000) dailyRate = 3.0;
+      else if (overdraftPrincipal <= 2500) dailyRate = 5.0;
+      else dailyRate = 10.0;
+    }
+    let totalDailyFee = dailyRate * simState.days;
+    let tariff = channelTariffs[simState.channel];
+
+    let pureFriction = accessFee + totalDailyFee + tariff;
+    let totalRealCost = simState.amount + pureFriction;
+    let markup = ((pureFriction / simState.amount) * 100).toFixed(1);
+
+    document.getElementById('display-amount').textContent = 'KES ' + simState.amount.toLocaleString();
+    document.getElementById('total-real-cost').textContent = 'KES ' + totalRealCost.toFixed(2);
+    document.getElementById('total-base-label').textContent = 'KES ' + simState.amount.toFixed(2) + ' transfer';
+    document.getElementById('friction-pct').textContent = '+' + markup + '% markup';
+
+    document.getElementById('break-principal').textContent = 'KES ' + overdraftPrincipal.toFixed(2);
+    document.getElementById('break-access').textContent = 'KES ' + accessFee.toFixed(2);
+    document.getElementById('break-daily').textContent = 'KES ' + totalDailyFee.toFixed(2);
+    document.getElementById('break-tariff').textContent = 'KES ' + tariff.toFixed(2);
+    document.getElementById('break-friction').textContent = 'KES ' + pureFriction.toFixed(2);
+  }
+
+  function setSimAmount(val) {
+    simState.amount = val;
+    document.querySelectorAll('.sim-btn-amount').forEach(btn => {
+      if (parseInt(btn.getAttribute('data-val')) === val) {
+        btn.className = 'sim-btn-amount py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-95';
+      } else {
+        btn.className = 'sim-btn-amount py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md transition-all active:scale-95';
+      }
+    });
+    updateSimulation();
+  }
+
+  function setDeficit(mode) {
+    simState.deficitMode = mode;
+    document.querySelectorAll('.sim-btn-deficit').forEach(btn => {
+      if (btn.getAttribute('data-mode') === mode) {
+        btn.className = 'sim-btn-deficit p-2 rounded-lg bg-primary-container text-on-primary text-center flex flex-col items-center gap-0.5 transition-all shadow-sm active:scale-95';
+      } else {
+        btn.className = 'sim-btn-deficit p-2 rounded-lg bg-surface-container text-on-surface text-center flex flex-col items-center gap-0.5 transition-all active:scale-95';
+      }
+    });
+    updateSimulation();
+  }
+
+  function setChannel(ch) {
+    simState.channel = ch;
+    document.querySelectorAll('.sim-btn-channel').forEach(btn => {
+      if (btn.getAttribute('data-chan') === ch) {
+        btn.className = 'sim-btn-channel flex items-center gap-2 p-2.5 rounded-lg bg-secondary-container text-on-secondary-fixed transition-all';
+      } else {
+        btn.className = 'sim-btn-channel flex items-center gap-2 p-2.5 rounded-lg bg-surface-container text-on-surface transition-all';
+      }
+    });
+    updateSimulation();
+  }
+
+  function updateDays(val) {
+    simState.days = parseInt(val);
+    document.getElementById('display-days').textContent = 'Day ' + val;
+    updateSimulation();
+  }
+
+  let answeredCount = 0;
+  function answerQ(qNum, isCorrect, el) {
+    const parent = document.getElementById('quiz-q' + qNum);
+    const feedback = document.getElementById('feedback-q1');
+    const feedback2 = document.getElementById('feedback-q2');
+    const targetFeedback = qNum === 1 ? feedback : feedback2;
+
+    parent.querySelectorAll('.q-opt').forEach(btn => {
+      btn.disabled = true;
+      btn.classList.add('opacity-60');
+    });
+
+    if (isCorrect) {
+      el.classList.remove('opacity-60');
+      el.classList.add('bg-secondary-container', 'text-on-secondary-fixed', 'font-bold');
+      targetFeedback.className = 'mt-1 p-2 rounded text-body-sm font-body-sm bg-secondary-fixed text-on-secondary-fixed font-bold block';
+      targetFeedback.textContent = 'Correct! Street smart: Minimize overdraft balance immediately to stop compounding daily fees.';
+      answeredCount++;
+    } else {
+      el.classList.remove('opacity-60');
+      el.classList.add('bg-error-container', 'text-on-error-container', 'font-bold');
+      targetFeedback.className = 'mt-1 p-2 rounded text-body-sm font-body-sm bg-error-container text-on-error-container block font-medium';
+      targetFeedback.textContent = 'Not quite! Overdrafting unnecessarily triggers immediate daily deductions.';
+    }
+
+    document.getElementById('quiz-score').textContent = answeredCount + ' / 2 Solved';
+  }
+
+  updateSimulation();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,47,25,0.06)]" data-active-classes="text-secondary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore-hub" href="#"><span class="material-symbols-outlined text-[24px]">explore</span><span class="font-label-sm text-label-sm">Explore</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 gap-0.5 transition-colors text-secondary font-bold" data-path="mpesa-and-debt" href="#"><span class="material-symbols-outlined text-[24px]">calculate</span><span class="font-label-sm text-label-sm">M-PESA</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="chama" href="#"><span class="material-symbols-outlined text-[24px]">groups</span><span class="font-label-sm text-label-sm">Chama</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="pocket-money" href="#"><span class="material-symbols-outlined text-[24px]">savings</span><span class="font-label-sm text-label-sm">Pocket</span></a></div></nav></body></html>

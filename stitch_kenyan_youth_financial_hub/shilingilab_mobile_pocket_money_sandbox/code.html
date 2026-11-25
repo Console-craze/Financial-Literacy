@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed-dim": "#4edea3", "surface-dim": "#d1ddd2", "on-error-container": "#93000a", "primary-fixed-dim": "#9ad3ad", "primary-container": "#0d472b", "error": "#ba1a1a", "on-primary-fixed": "#002110", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#7f2b00", "secondary": "#006c49", "surface-container-lowest": "#ffffff", "inverse-surface": "#29332b", "surface-variant": "#dae6da", "on-secondary-container": "#00714d", "on-background": "#141e17", "surface-container": "#e5f1e5", "surface-tint": "#33694a", "secondary-fixed": "#6ffbbe", "on-tertiary-container": "#ff8856", "background": "#f1fcf1", "surface-container-highest": "#dae6da", "surface-container-low": "#ebf7eb", "surface-bright": "#f1fcf1", "on-tertiary-fixed": "#370e00", "tertiary-container": "#702500", "inverse-primary": "#9ad3ad", "tertiary-fixed-dim": "#ffb598", "on-tertiary": "#ffffff", "on-secondary-fixed": "#002113", "tertiary-fixed": "#ffdbce", "on-surface-variant": "#414942", "secondary-container": "#6cf8bb", "outline": "#717972", "tertiary": "#4c1700", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#005236", "on-secondary": "#ffffff", "surface": "#f1fcf1", "inverse-on-surface": "#e8f4e8", "on-primary-fixed-variant": "#195033", "primary-fixed": "#b6f0c8", "surface-container-high": "#e0ebe0", "on-primary": "#ffffff", "on-surface": "#141e17", "outline-variant": "#c0c9c0", "on-primary-container": "#7db591", "primary": "#002f19" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-desktop": "1.5rem", "margin-tablet": "2rem", "margin-desktop": "3rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1rem", "margin": "1rem" }, "fontFamily": { "headline-md": ["Sora"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Sora"], "headline-lg-mobile": ["Sora"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-mobile": ["Sora"], "label-md": ["Plus Jakarta Sans"], "display": ["Sora"], "headline-lg": ["Sora"] }, "fontSize": { "headline-md": ["1.5rem", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-md": ["1rem", { "lineHeight": "1.55", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["0.6875rem", { "lineHeight": "1.1", "letterSpacing": "0.06em", "fontWeight": "800" }], "headline-sm": ["1.25rem", { "lineHeight": "1.35", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["0.875rem", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }], "label-lg": ["0.875rem", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-lg": ["1.125rem", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }], "display-mobile": ["2.25rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-md": ["0.75rem", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "700" }], "display": ["3.5rem", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg": ["2.25rem", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f1fcf1;color:#141e17;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="flex items-center gap-1.5 shrink-0"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">bolt</span></div><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-extrabold">ShilingiLab</span></div><span class="rounded-full bg-secondary-container px-2 py-0.5 font-label-sm text-label-sm text-on-secondary-fixed font-black uppercase tracking-wider shrink-0">Teens</span></div><div class="flex items-center gap-space-sm shrink-0"><div class="flex items-center gap-1 bg-surface-container-highest/80 px-2.5 py-1 rounded-full"><span class="font-label-sm text-label-sm text-secondary font-extrabold">KES</span><span class="font-headline-sm text-label-lg text-primary font-bold">850</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- Top Context Tag -->
+<div class="flex items-center gap-space-xs mt-space-sm mb-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">sports_esports</span>
+      Decision Simulator v2.4
+    </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm tracking-wide uppercase truncate">
+      · Real Kenyan High School Dynamics
+    </span>
+</div>
+<!-- Editorial Title Banner -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight font-extrabold">
+      The Term Budget Sandbox: Can Your KES 3,500 Survive 13 Weeks?
+    </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+      Simulate high-stakes canteen temptations, sudden project printouts, and matatu fare surges without risking real pocket money.
+    </p>
+</div>
+<!-- Mode Switcher Pill Control -->
+<div class="p-1 rounded-xl bg-surface-container-high flex items-center justify-between mb-space-md shadow-sm">
+<button class="flex-1 py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-1.5" id="mode-boarding" onclick="switchMode('boarding')">
+<span class="material-symbols-outlined text-[16px]">bed</span>
+      Boarding School
+    </button>
+<button class="flex-1 py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5" id="mode-day" onclick="switchMode('day')">
+<span class="material-symbols-outlined text-[16px]">directions_bus</span>
+      Day Scholar Commute
+    </button>
+</div>
+<!-- Live Telemetry HUD (2x2 Grid) -->
+<div class="grid grid-cols-2 gap-space-sm mb-space-lg">
+<!-- Stat 1: Wallet -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-extrabold">Remaining</span>
+<span class="w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-fixed text-[14px]">account_balance_wallet</span>
+</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-primary font-extrabold" id="hud-wallet">
+<span class="font-label-md text-label-md text-secondary">KES</span> 2,400
+        </div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span>Started:</span>
+<span class="font-bold text-on-surface">KES 3,500</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" id="bar-wallet" style="width: 68%;"></div>
+</div>
+</div>
+<!-- Stat 2: Social Morale -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-extrabold">Squad Vibes</span>
+<span class="w-6 h-6 rounded-full bg-secondary-fixed-dim/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed text-[14px]">sentiment_very_satisfied</span>
+</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-primary font-extrabold flex items-baseline gap-1" id="hud-morale">
+          85<span class="font-label-md text-label-md text-on-surface-variant">%</span>
+</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">local_fire_department</span> High Standing
+        </div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full transition-all duration-500" id="bar-morale" style="width: 85%;"></div>
+</div>
+</div>
+<!-- Stat 3: Academic Readiness -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-extrabold">Academics</span>
+<span class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[14px]">auto_stories</span>
+</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-primary font-extrabold flex items-baseline gap-1" id="hud-academic">
+          90<span class="font-label-md text-label-md text-on-surface-variant">%</span>
+</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">done_all</span> Dossier Ready
+        </div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" id="bar-academic" style="width: 90%;"></div>
+</div>
+</div>
+<!-- Stat 4: Emergency Buffer Vault -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-extrabold">Fare Vault</span>
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[14px]">lock</span>
+</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-primary font-extrabold">
+<span class="font-label-md text-label-md text-tertiary">KES</span> 500
+        </div>
+<div class="font-label-sm text-label-sm text-tertiary-container font-extrabold flex items-center gap-0.5 mt-0.5">
+          Untouchable reserve
+        </div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<!-- Week 4 Interactive Scenario Card -->
+<div class="mb-space-lg rounded-xl bg-surface-container-lowest shadow-md overflow-hidden flex flex-col">
+<!-- Card Header / Timeline Ribbon -->
+<div class="bg-primary-container px-space-md py-space-sm flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">bolt</span>
+<span class="font-label-lg text-label-lg font-extrabold tracking-wide uppercase">Week 4 of 13 Dilemma</span>
+</div>
+<span class="font-label-sm text-label-sm bg-primary/40 px-2 py-0.5 rounded-full text-secondary-fixed font-bold">
+        Live Simulation
+      </span>
+</div>
+<!-- Context Media Frame -->
+<div class="relative w-full h-44 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A lively Kenyan high school tuckshop courtyard during mid-morning break with students in green uniforms chatting near a canteen counter serving fresh snacks, shot with warm natural sunlight, documentary editorial style, rich greens and earthy terracotta accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI1PTTZsVEH8AFs6LjVqcEpRYv8Y24Re3mn8rGIyoHMPtYJt6TE9hqr-DYfQDueePKnpA7s2FLGmiLW8ncuq4m8EWj5kR1uC3KCazy0zzB3OPUFsS1yzrcazK5OPYWMA0iR6KYTp51iAht0B2UtUQ_Ik8Q1iR0zYqwHi8ms8dfQJu7bYLoiRKRy040qbn_TIpCz6ypRKBbfgRnZsOytB2VJNDAO0cpmslGjPXMBO1v"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent flex items-end p-space-md">
+<div class="text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed font-black">Urgent Event</span>
+<h2 class="font-headline-sm text-headline-sm text-on-primary leading-tight font-extrabold">
+            The Tuckshop Temptation &amp; Project Deadline
+          </h2>
+</div>
+</div>
+</div>
+<!-- Dilemma Description Body -->
+<div class="p-space-md flex flex-col gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        The History dossier is due tomorrow at 8:00 AM (Color printout: <span class="font-bold text-on-surface">KES 200</span>). Meanwhile, the squad is swarming the tuckshop for hot fresh samosas (<span class="font-bold text-on-surface">KES 150</span> total for round one). Your stomach is growling, but week 4 is notoriously unforgiving.
+      </p>
+<!-- Interactive Options -->
+<div class="flex flex-col gap-space-xs mt-space-xs" id="scenario-options">
+<!-- Option A -->
+<button class="w-full text-left p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex items-start gap-3 group" id="btn-opt-a" onclick="pickOption('A')">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-primary font-headline-sm text-label-sm font-black flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+            A
+          </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-primary">Academic First, Skip Canteen</span>
+<span class="font-label-sm text-label-sm text-error font-bold">-KES 200</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Pay printing immediately, drink dorm tap water, take a temporary squad vibe hit.</p>
+</div>
+</button>
+<!-- Option B -->
+<button class="w-full text-left p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex items-start gap-3 group" id="btn-opt-b" onclick="pickOption('B')">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-primary font-headline-sm text-label-sm font-black flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+            B
+          </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-primary">Full Flex: Do Both!</span>
+<span class="font-label-sm text-label-sm text-error font-bold">-KES 350</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Glossy printout + feast with the squad. Max vibes (+15%), but severe wallet shock.</p>
+</div>
+</button>
+<!-- Option C -->
+<button class="w-full text-left p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex items-start gap-3 group" id="btn-opt-c" onclick="pickOption('C')">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-primary font-headline-sm text-label-sm font-black flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+            C
+          </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-primary">Hustler's Compromise</span>
+<span class="font-label-sm text-label-sm text-error font-bold">-KES 75</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Neatly handwrite dossier with desk partner, grab a single samosa to stay social.</p>
+</div>
+</button>
+</div>
+<!-- Feedback Outcome Bar -->
+<div class="hidden mt-space-xs p-space-sm rounded-lg bg-surface-container text-on-surface-variant font-body-sm text-body-sm flex items-start gap-2" id="feedback-banner">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">tips_and_updates</span>
+<div id="feedback-text">Option selected. Telemetry recalculated!</div>
+</div>
+</div>
+</div>
+<!-- The Kenyan 'Leak' Detector Card -->
+<div class="mb-space-lg rounded-xl bg-surface-container-lowest shadow-md p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">search_insights</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-extrabold leading-tight">The Term Leak Detector</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Silent micro-spends draining your stoo</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-extrabold">
+        Danger Zone
+      </span>
+</div>
+<!-- Leak List -->
+<div class="flex flex-col gap-space-xs">
+<!-- Leak item 1 -->
+<div class="flex items-center justify-between p- space-sm py-2 px-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">bakery_dining</span>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Daily 1 Mandazi + Chai</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">KES 40/day across 90 days</div>
+</div>
+</div>
+<div class="font-label-lg text-label-lg text-error font-extrabold text-right">
+          -KES 3,600
+          <div class="font-label-sm text-label-sm text-on-surface-variant font-normal">per term</div>
+</div>
+</div>
+<!-- Leak item 2 -->
+<div class="flex items-center justify-between p-space-sm py-2 px-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">wifi_tethering</span>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Daily 20MB Tunukiwa Bundle</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">KES 20/day impulsive WhatsApp top-up</div>
+</div>
+</div>
+<div class="font-label-lg text-label-lg text-error font-extrabold text-right">
+          -KES 1,800
+          <div class="font-label-sm text-label-sm text-on-surface-variant font-normal">per term</div>
+</div>
+</div>
+<!-- Leak item 3 -->
+<div class="flex items-center justify-between p-space-sm py-2 px-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-on-surface text-[20px]">thunderstorm</span>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Rainy Day Matatu Fare Surge</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">KES 50 extra on unexpected storm days</div>
+</div>
+</div>
+<div class="font-label-lg text-label-lg text-error font-extrabold text-right">
+          -KES 1,200
+          <div class="font-label-sm text-label-sm text-on-surface-variant font-normal">per term</div>
+</div>
+</div>
+</div>
+<!-- Total Leak Callout Banner -->
+<div class="p-space-sm rounded-lg bg-error-container/60 flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-error text-[22px] shrink-0">warning</span>
+<div class="truncate">
+<div class="font-label-sm text-label-sm text-on-error-container uppercase tracking-wider font-extrabold">Total Leakage Impact</div>
+<div class="font-body-sm text-body-sm text-error font-extrabold truncate">Exceeds your entire budget by 1.8x!</div>
+</div>
+</div>
+<div class="font-headline-sm text-headline-sm text-error font-black shrink-0">
+        KES 6,600
+      </div>
+</div>
+</div>
+<!-- Nairobi Teen Hustle Fork (Seed Capital Allocation) -->
+<div class="mb-space-lg rounded-xl bg-surface-container-lowest shadow-md p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">trending_up</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-extrabold">Nairobi Teen Hustle Fork</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Deploy KES 600 seed capital from your savings to beat inflation.</p>
+</div>
+</div>
+<!-- Hustle Choices (Split Cards) -->
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Hustle 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Handcrafted colorful Kenyan beaded bracelets and beadwork kits in vibrant Maasai red, green, and turquoise patterns laid on a wooden school desk, macro shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2wXsgK3WdKnHB2zcyWoMsgWnrvLJ8GlIbMBudsusOJbB1L_XA-llmyzMfdQGMcnRsrTkcgeggyYvBM0a8fNSuc6thnR1U4HvZDiSiJzFiKlSqeVOhxdSE-TSJcbtcyCTUl60d3YrU0us5qfG4beoGyRqP9zAMqe5DM2ggpF4yp34ye1cEUwVoOO-TdDT-8JUtItd8l9nH7HvCWHHccEW1O5DeYfmj4yq-VK8sP0of"/>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-primary">Kariokor Beadwork Kits</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Custom house/dorm wristbands</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-black">
+            +85% ROI
+          </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Input: KES 600 → Est. Return: <span class="font-bold text-secondary">KES 1,110</span></span>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-bold transition-transform active:translate-y-0.5" onclick="deployHustle('beadwork')">
+            Deploy
+          </button>
+</div>
+</div>
+<!-- Hustle 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Creative graphic design prints and colorful school club posters displayed against a green classroom notice board, sharp digital design style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjFcklFvmtO6wjZmw6hPtRwaxbkQwycHEhr88YckVkGiXwBgazhUNqWSbKKBRGxtCuYyzh4um23qKf3c0Szs51gDknR3Z_i5yBmnjChNrVdFuPSek_oCgKwaTgo_F55xAbeDrqm2igJOkGNfm9kVLbuKyGpdwXSFvdLbnzj7PowaCkT3NyxEWRfDjjhFAVqXmwLfNoolg1zS0u3hrOODZ0Rg6La3DS0xmdm6u61A_n"/>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-primary">Canva Club Posters &amp; Prints</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Science congress &amp; drama banners</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-black">
+            +50% ROI
+          </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Input: KES 400 → Est. Return: <span class="font-bold text-secondary">KES 600</span></span>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold transition-transform active:translate-y-0.5" onclick="deployHustle('canva')">
+            Deploy
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Street-Smart Mental Models Playbook Cards -->
+<div class="flex flex-col gap-space-sm mb-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-primary font-extrabold">Street-Smart Playbook</h2>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Survival Rules</span>
+</div>
+<!-- Playbook Card 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">hourglass_top</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-primary">The 24-Hour Canteen Rule</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Never buy snack boxes on the day pocket money arrives. Sleep on any purchase above KES 100 — 70% of cravings vanish by morning prep.
+        </p>
+</div>
+</div>
+<!-- Playbook Card 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">call_split</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-primary">Split Supplies from Pleasure</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Buy biros, geokits, and soap during Week 1 in bulk. Mixing stationery money with tuckshop cash always results in writing with half a pencil.
+        </p>
+</div>
+</div>
+<!-- Playbook Card 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[20px]">shield_person</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-tertiary">The Unlendable KES 200 Buffer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Keep KES 200 folded deep in your mattress or ID card slot. Mentally classify it as non-existent so peer pressure can't touch it.
+        </p>
+</div>
+</div>
+</div>
+<!-- Final Affirmation / Action Footer -->
+<div class="rounded-xl bg-secondary-container p-space-md flex flex-col gap-space-xs text-on-secondary-fixed shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified</span>
+<h3 class="font-headline-sm text-headline-sm font-extrabold text-on-secondary-fixed">Simulation Ready to Lock?</h3>
+</div>
+<p class="font-body-sm text-body-sm opacity-90">
+      Lock your scenario choices to benchmark against 1,240 Nairobi high schoolers and earn the "Zero-Broke Term" badge.
+    </p>
+<button class="mt-space-xs w-full py-3 px-space-md rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg font-extrabold tracking-wide uppercase shadow-sm transition-transform active:translate-y-0.5 flex items-center justify-center gap-2" id="btn-lock" onclick="commitBudget()">
+<span>Lock Term Budget Sandbox</span>
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+</button>
+</div>
+</div>
+<script>
+  let currentWallet = 2400;
+  let currentMorale = 85;
+  let currentAcademic = 90;
+  let activeMode = 'boarding';
+
+  function switchMode(mode) {
+    activeMode = mode;
+    const btnBoarding = document.getElementById('mode-boarding');
+    const btnDay = document.getElementById('mode-day');
+    
+    if (mode === 'boarding') {
+      btnBoarding.className = "flex-1 py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-1.5";
+      btnDay.className = "flex-1 py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5";
+      currentWallet = 2400;
+      updateHUD("Boarding School dynamics active. Canteen & dormitory rationing applied.");
+    } else {
+      btnDay.className = "flex-1 py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-1.5";
+      btnBoarding.className = "flex-1 py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5";
+      currentWallet = 1950;
+      updateHUD("Day Scholar mode active. Daily matatu fare buffer adjusted (-KES 450).");
+    }
+    renderHUD();
+  }
+
+  function pickOption(choice) {
+    const feedback = document.getElementById('feedback-banner');
+    const feedbackText = document.getElementById('feedback-text');
+    feedback.classList.remove('hidden');
+
+    // Reset styles on option buttons
+    ['a', 'b', 'c'].forEach(opt => {
+      const btn = document.getElementById('btn-opt-' + opt);
+      if (btn) btn.classList.remove('bg-surface-container-highest');
+    });
+
+    const activeBtn = document.getElementById('btn-opt-' + choice.toLowerCase());
+    if (activeBtn) activeBtn.classList.add('bg-surface-container-highest');
+
+    if (choice === 'A') {
+      currentWallet -= 200;
+      currentAcademic = Math.min(100, currentAcademic + 5);
+      currentMorale = Math.max(30, currentMorale - 10);
+      feedbackText.innerHTML = "<strong>Option A chosen:</strong> Printed cleanly! Academic rating jumped to " + currentAcademic + "%, but hungry prep caused squad morale dip.";
+    } else if (choice === 'B') {
+      currentWallet -= 350;
+      currentAcademic = Math.min(100, currentAcademic + 5);
+      currentMorale = Math.min(100, currentMorale + 15);
+      feedbackText.innerHTML = "<strong>Option B chosen:</strong> Squad feast legendary! Morale shot up to " + currentMorale + "%, but wallet took a heavy hit.";
+    } else if (choice === 'C') {
+      currentWallet -= 75;
+      currentAcademic = Math.max(50, currentAcademic - 5);
+      currentMorale = Math.min(100, currentMorale + 5);
+      feedbackText.innerHTML = "<strong>Option C chosen:</strong> Smart street hustle! Saved KES 125, shared one samosa, neatly handwritten dossier accepted.";
+    }
+    renderHUD();
+  }
+
+  function deployHustle(type) {
+    const feedback = document.getElementById('feedback-banner');
+    const feedbackText = document.getElementById('feedback-text');
+    feedback.classList.remove('hidden');
+
+    if (type === 'beadwork') {
+      currentWallet += 510;
+      currentMorale = Math.min(100, currentMorale + 10);
+      feedbackText.innerHTML = "<strong>Kariokor Beadwork Delivered:</strong> Pocketed +KES 510 net profit! Dorm pride at maximum.";
+    } else {
+      currentWallet += 200;
+      currentAcademic = Math.min(100, currentAcademic + 8);
+      feedbackText.innerHTML = "<strong>Canva Posters Delivered:</strong> Science club paid prompt! +KES 200 profit and teacher commended design skills.";
+    }
+    renderHUD();
+  }
+
+  function commitBudget() {
+    const lockBtn = document.getElementById('btn-lock');
+    lockBtn.innerHTML = '<span>Simulation Locked & Verified!</span><span class="material-symbols-outlined text-[18px]">check_circle</span>';
+    lockBtn.className = "mt-space-xs w-full py-3 px-space-md rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg font-extrabold tracking-wide uppercase shadow-sm flex items-center justify-center gap-2";
+    
+    const feedback = document.getElementById('feedback-banner');
+    const feedbackText = document.getElementById('feedback-text');
+    feedback.classList.remove('hidden');
+    feedbackText.innerHTML = "<strong>Kongole!</strong> Your 13-week sandbox is locked with KES " + currentWallet + " surplus. You passed the Mid-Term Crash Barrier!";
+  }
+
+  function updateHUD(msg) {
+    const feedback = document.getElementById('feedback-banner');
+    const feedbackText = document.getElementById('feedback-text');
+    feedback.classList.remove('hidden');
+    feedbackText.innerHTML = msg;
+  }
+
+  function renderHUD() {
+    const walletEl = document.getElementById('hud-wallet');
+    const moraleEl = document.getElementById('hud-morale');
+    const academicEl = document.getElementById('hud-academic');
+    const barWallet = document.getElementById('bar-wallet');
+    const barMorale = document.getElementById('bar-morale');
+    const barAcademic = document.getElementById('bar-academic');
+
+    if (walletEl) walletEl.innerHTML = '<span class="font-label-md text-label-md text-secondary">KES</span> ' + currentWallet.toLocaleString();
+    if (moraleEl) moraleEl.innerHTML = currentMorale + '<span class="font-label-md text-label-md text-on-surface-variant">%</span>';
+    if (academicEl) academicEl.innerHTML = currentAcademic + '<span class="font-label-md text-label-md text-on-surface-variant">%</span>';
+
+    if (barWallet) {
+      const pct = Math.max(0, Math.min(100, Math.round((currentWallet / 3500) * 100)));
+      barWallet.style.width = pct + '%';
+    }
+    if (barMorale) barMorale.style.width = currentMorale + '%';
+    if (barAcademic) barAcademic.style.width = currentAcademic + '%';
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,47,25,0.06)]" data-active-classes="text-secondary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore-hub" href="#"><span class="material-symbols-outlined text-[24px]">explore</span><span class="font-label-sm text-label-sm">Explore</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="mpesa-and-debt" href="#"><span class="material-symbols-outlined text-[24px]">calculate</span><span class="font-label-sm text-label-sm">M-PESA</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="chama" href="#"><span class="material-symbols-outlined text-[24px]">groups</span><span class="font-label-sm text-label-sm">Chama</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 gap-0.5 transition-colors text-secondary font-bold" data-path="pocket-money" href="#"><span class="material-symbols-outlined text-[24px]">savings</span><span class="font-label-sm text-label-sm">Pocket</span></a></div></nav></body></html>

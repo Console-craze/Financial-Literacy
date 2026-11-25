@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline-variant":"#c0c9c2","on-tertiary":"#ffffff","primary-fixed":"#b4efd5","error":"#ba1a1a","on-error-container":"#93000a","primary-container":"#0b4a37","on-primary-container":"#7fb9a0","surface-variant":"#e6e2d8","on-primary-fixed":"#002116","on-primary-fixed-variant":"#14503d","surface-container-high":"#ece8de","surface-container-low":"#f7f3e9","on-tertiary-container":"#ff8e6f","on-secondary-container":"#734a00","secondary-fixed":"#ffddb5","outline":"#707974","on-error":"#ffffff","on-surface":"#1c1c16","background":"#fdf9ef","surface-container":"#f1eee4","secondary":"#835400","inverse-surface":"#31312a","tertiary-container":"#7d1e00","on-surface-variant":"#404944","surface-container-highest":"#e6e2d8","surface":"#fdf9ef","on-secondary":"#ffffff","on-secondary-fixed-variant":"#643f00","tertiary":"#561100","surface-container-lowest":"#ffffff","secondary-container":"#feb958","inverse-primary":"#98d3b9","secondary-fixed-dim":"#feb958","surface-dim":"#dddad0","surface-bright":"#fdf9ef","primary-fixed-dim":"#98d3b9","tertiary-fixed":"#ffdbd1","surface-tint":"#306854","on-tertiary-fixed-variant":"#852405","primary":"#003223","inverse-on-surface":"#f4f0e7","error-container":"#ffdad6","on-secondary-fixed":"#2a1800","on-primary":"#ffffff","on-background":"#1c1c16","tertiary-fixed-dim":"#ffb5a0","on-tertiary-fixed":"#3b0900"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-lg":"1.5rem",gutter:"1.5rem","space-md":"1rem","space-xs":"0.25rem","margin-mobile":"1rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-xl":"2.5rem",margin:"2.5rem"},fontFamily:{"body-md":["Inter"],"display-lg-mobile":["Newsreader"],"display-lg":["Newsreader"],"label-sm":["Inter"],"label-md":["Inter"],"headline-lg":["Newsreader"],"headline-lg-mobile":["Newsreader"],"body-sm":["Inter"],"headline-sm":["Newsreader"],"headline-md":["Newsreader"],"body-lg":["Inter"],"label-lg":["Inter"]},fontSize:{"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"display-lg-mobile":["34px",{lineHeight:"42px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.02em",fontWeight:"400"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"700"}],"label-md":["11px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"500"}],"headline-lg-mobile":["26px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><div class="w-9 h-9 rounded bg-primary-container text-secondary-fixed flex items-center justify-center font-headline-md text-headline-sm font-semibold"><span class="-translate-y-px">K</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-sm font-semibold text-primary leading-none tracking-tight">Kesho</span><span class="font-label-sm text-label-sm uppercase text-secondary tracking-widest mt-1">FINANCIAL LITERACY PROJECT</span></div></a><nav class="hidden md:flex items-center gap-space-md" data-active-classes="bg-surface-container text-primary font-semibold rounded"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs transition-colors" data-path="the-gap" href="#">The gap</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs transition-colors" data-path="topics" href="#">Topics</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs transition-colors" data-path="myths" href="#">Myths</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs transition-colors" data-path="voices" href="#">Voices</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs transition-colors" data-path="topics" href="#">Explore</a><a class="inline-flex items-center justify-center font-label-lg text-label-lg bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-space-md py-space-xs rounded-full transition-all duration-200 shadow-sm" data-path="join-the-project" href="#">Join the project</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full text-on-surface">
+<!-- 1. HERO SECTION -->
+<section class="relative w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<!-- Left Column: Copy & Actions -->
+<div class="lg:col-span-7 flex flex-col items-start pr-0 lg:pr-space-md">
+<!-- Eyebrow -->
+<div class="inline-flex items-center gap-space-xs bg-surface-container-high px-3 py-1.5 rounded-full mb-space-md shadow-sm">
+<span class="w-2 h-2 rotate-45 bg-secondary inline-block"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">A STUDENT RESEARCH PROJECT · KENYA</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight mb-space-md leading-tight">
+          Everyone is using money. <br class="hidden sm:inline"/>
+<span class="italic font-display-lg text-primary-container">Nobody is explaining it.</span>
+</h1>
+<!-- Subhead -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-lg leading-relaxed">
+          A student-built guide to financial thinking for 14–17 year olds in Kenya. Not a banking app. Not a savings calculator. Just the things we wish someone had said out loud.
+        </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-md mb-space-xl">
+<a class="inline-flex items-center gap-2 bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg px-6 py-3.5 rounded shadow-md transition-all duration-200" href="#topics">
+<span>Explore the topics</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg px-6 py-3.5 rounded shadow-sm transition-all duration-200" href="#gap">
+<span>Read what we found</span>
+</a>
+</div>
+<!-- Metadata Line -->
+<div class="flex items-center gap-2 text-on-surface-variant pt-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">school</span>
+<span class="font-label-md text-label-md tracking-wider text-on-surface-variant uppercase">Built by students · Nairobi · Kisumu · Mombasa · 2026</span>
+</div>
+</div>
+<!-- Right Column: Signature Tilted Ledger Card -->
+<div class="lg:col-span-5 relative flex justify-center py-6">
+<!-- Floating Backdrop glow -->
+<div class="absolute -inset-4 bg-gradient-to-tr from-secondary-fixed/30 to-primary-fixed/20 blur-2xl rounded-full opacity-60 pointer-events-none"></div>
+<!-- Tilted Card -->
+<div class="relative w-full max-w-md bg-surface-container-lowest p-space-lg rounded-xl shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-300 ease-out">
+<!-- Floating Gold Question Badge -->
+<div class="absolute -top-4 -right-4 w-11 h-11 rounded-full bg-secondary-container text-on-secondary-container shadow-md flex items-center justify-center font-bold text-headline-sm">
+            ?
+          </div>
+<!-- Card Header -->
+<div class="flex justify-between items-baseline pb-space-sm mb-space-sm bg-surface-container-high/60 px-space-sm py-space-xs rounded">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">A week in money</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-medium">Form 2 · Nairobi</span>
+</div>
+<!-- Line Items with Ledger Styling -->
+<div class="space-y-space-sm py-space-xs">
+<div class="flex justify-between items-center text-body-md font-body-md py-1">
+<span class="text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+                Matatu to school
+              </span>
+<span class="font-label-lg text-label-lg font-semibold text-tertiary tabular-nums">− 60</span>
+</div>
+<div class="flex justify-between items-center text-body-md font-body-md py-1">
+<span class="text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+                Data bundle
+              </span>
+<span class="font-label-lg text-label-lg font-semibold text-tertiary tabular-nums">− 50</span>
+</div>
+<div class="flex justify-between items-center text-body-md font-body-md py-1">
+<span class="text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+                Lunch, three days
+              </span>
+<span class="font-label-lg text-label-lg font-semibold text-tertiary tabular-nums">− 120</span>
+</div>
+<div class="flex justify-between items-center text-body-md font-body-md py-1.5 bg-primary-fixed/20 px-2 rounded">
+<span class="text-primary font-medium flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Mum sends “tumia vizuri”
+              </span>
+<span class="font-label-lg text-label-lg font-bold text-primary-container tabular-nums">+ 500</span>
+</div>
+<div class="flex justify-between items-center text-body-md font-body-md py-1">
+<span class="text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+                Cousin’s chama contribution
+              </span>
+<span class="font-label-lg text-label-lg font-semibold text-tertiary tabular-nums">− 100</span>
+</div>
+</div>
+<!-- Dilemma Callout Box -->
+<div class="mt-space-md p-space-sm bg-surface-container rounded-r-lg relative overflow-hidden shadow-inner">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="pl-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary block font-bold mb-0.5">Dilemma</span>
+<p class="font-headline-sm text-[15px] font-semibold text-on-surface mb-0.5">Aunt asks for a "small loan"</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Nobody explained how to say no. Or whether to.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. CONTINUOUS TICKER RIBBON -->
+<div class="w-full bg-surface-container py-space-sm overflow-hidden shadow-inner">
+<div class="flex items-center gap-space-lg whitespace-nowrap animate-marquee">
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-md text-label-md uppercase tracking-widest">
+<span>M-Pesa</span><span class="text-secondary">✦</span>
+<span>Chama</span><span class="text-secondary">✦</span>
+<span>Fuliza</span><span class="text-secondary">✦</span>
+<span>Black tax</span><span class="text-secondary">✦</span>
+<span>Matatu fare</span><span class="text-secondary">✦</span>
+<span>Data bundles</span><span class="text-secondary">✦</span>
+<span>Loan apps</span><span class="text-secondary">✦</span>
+<span>Betting odds</span><span class="text-secondary">✦</span>
+<span>Savings groups</span><span class="text-secondary">✦</span>
+<span>Hustle income</span><span class="text-secondary">✦</span>
+<span>Interest rates</span><span class="text-secondary">✦</span>
+<span>Family money</span><span class="text-secondary">✦</span>
+</div>
+<div aria-hidden="true" class="flex items-center gap-space-md text-on-surface-variant font-label-md text-label-md uppercase tracking-widest">
+<span>M-Pesa</span><span class="text-secondary">✦</span>
+<span>Chama</span><span class="text-secondary">✦</span>
+<span>Fuliza</span><span class="text-secondary">✦</span>
+<span>Black tax</span><span class="text-secondary">✦</span>
+<span>Matatu fare</span><span class="text-secondary">✦</span>
+<span>Data bundles</span><span class="text-secondary">✦</span>
+<span>Loan apps</span><span class="text-secondary">✦</span>
+<span>Betting odds</span><span class="text-secondary">✦</span>
+<span>Savings groups</span><span class="text-secondary">✦</span>
+<span>Hustle income</span><span class="text-secondary">✦</span>
+<span>Interest rates</span><span class="text-secondary">✦</span>
+<span>Family money</span><span class="text-secondary">✦</span>
+</div>
+</div>
+</div>
+<!-- 3. 01 — THE GAP (Split Layout) -->
+<section class="relative w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl overflow-hidden" id="gap">
+<!-- Huge Ghosted Watermark Numeral -->
+<div class="pointer-events-none select-none absolute -left-8 -top-12 font-display-lg text-[280px] text-surface-container-high/40 leading-none font-normal">
+      01
+    </div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Editorial Column -->
+<div class="lg:col-span-6 pr-0 lg:pr-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold block mb-space-xs">
+          01 — THE GAP
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-space-md leading-snug">
+          Watching money happen is not the same as understanding it.
+        </h2>
+<div class="space-y-space-md text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
+<p>
+            In Kenya, a fifteen-year-old sends money on their mother's phone, calculates fares in fluctuating traffic, buys data by the day, and overhears debates about hospital bills and chama contributions.
+          </p>
+<p>
+            Yet the school syllabus discusses cheques, balance sheets, and bank ledger accounts that few families use. Between the adult financial world that is everywhere and the formal education meant to explain it, there is silence.
+          </p>
+<p class="font-headline-sm text-headline-sm italic text-primary">
+            “We don't lack access to transactions. We lack anyone explaining the consequences before they arrive.”
+          </p>
+</div>
+<!-- Ledger metric visual block -->
+<div class="mt-space-lg grid grid-cols-2 gap-space-md p-space-md bg-surface-container rounded-lg shadow-sm">
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-xs">
+<span class="font-display-lg text-display-lg text-primary font-normal block leading-tight">88%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mt-1">Handle digital money weekly</span>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-xs">
+<span class="font-display-lg text-display-lg text-secondary font-normal block leading-tight">11%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mt-1">Taught what loan interest means</span>
+</div>
+</div>
+</div>
+<!-- Right 3 Observation Cards -->
+<div class="lg:col-span-6 flex flex-col gap-space-md pt-2 lg:pt-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-start gap-space-md hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold shrink-0">
+            1
+          </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">We see the transaction, not the thinking</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              We know the PIN, the green confirmation prompt, and the agent fees. But nobody sees why a parent took a loan, why they saved in a chama instead of a bank, or why money runs short mid-month.
+            </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-start gap-space-md hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold shrink-0">
+            2
+          </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">The words don’t match the life</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Textbooks define "Compound Interest" with formulas, but not Fuliza daily rollover fees. They teach "Commercial Banks" while everyday life happens on mobile networks and communal table-banking.
+            </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-start gap-space-md hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold shrink-0">
+            3
+          </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Confidence arrives too late</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Most people in Kenya learn about debt traps, guarantor liability, and credit bureaus through penalties, defaulted group contributions, and locked phones. We think 15 is the time to start.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. 02 — WHAT WE'RE EXPLORING (6 Topics Grid) -->
+<section class="relative w-full bg-surface-container-low py-space-xl overflow-hidden shadow-inner" id="topics">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin relative">
+<!-- Huge Ghosted Watermark Numeral -->
+<div class="pointer-events-none select-none absolute right-4 -top-16 font-display-lg text-[260px] text-surface-container-high/50 leading-none font-normal">
+        02
+      </div>
+<div class="relative z-10 mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold block mb-space-xs">
+          02 — WHAT WE'RE EXPLORING
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-primary leading-tight">
+          Six things nobody explained properly.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+          Our field research across three counties distilled these core themes teenagers repeatedly asked about in confidence.
+        </p>
+</div>
+<!-- 3-Column Grid of 6 Topic Cards -->
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Topic 01 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold">
+                01
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px]">send_to_mobile</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">M-Pesa isn’t a wallet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              It’s a door. Why having money in the phone feels different than holding physical cash, and how frictionless transfers make shillings evaporate.
+            </p>
+</div>
+<div class="pt-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+            Digital Friction &amp; Mental Accounting
+          </div>
+</div>
+<!-- Topic 02 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold">
+                02
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px]">trending_up</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">The interest you don’t see</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Fuliza, digital overdrafts, and micro-loan apps. How access fee structures disguised as daily pennies add up to 300%+ APR on small balances.
+            </p>
+</div>
+<div class="pt-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+            Credit mechanics &amp; unseen costs
+          </div>
+</div>
+<!-- Topic 03 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold">
+                03
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px]">groups</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Chamas &amp; savings groups</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Who holds the money, who decides, and how social trust functions as collateral. The powerhouse institution powering Kenyan wealth.
+            </p>
+</div>
+<div class="pt-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+            Communal savings &amp; informal governance
+          </div>
+</div>
+<!-- Topic 04 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold">
+                04
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px]">diversity_3</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Black tax &amp; family money</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              The unspoken social contract of supporting extended family. Understanding mutual solidarity versus self-sabotage without guilt.
+            </p>
+</div>
+<div class="pt-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+            Intergenerational expectations
+          </div>
+</div>
+<!-- Topic 05 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold">
+                05
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px]">storefront</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">The hustle economy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Navigating irregular daily income, freelance gigs, and side stalls. How to stabilize budgeting when next week's earnings are completely unknown.
+            </p>
+</div>
+<div class="pt-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+            Volatility management
+          </div>
+</div>
+<!-- Topic 06 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold">
+                06
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px]">casino</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Betting &amp; the big win</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Why sports odds feel like an investment instead of a tax on hope. Unpacking algorithmic probability versus the lived feeling of luck.
+            </p>
+</div>
+<div class="pt-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+            Risk perception &amp; probability
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. 03 — MONEY MYTHS (Immersive Deep Green Dark Section) -->
+<section class="w-full bg-[#052A1E] text-on-primary py-space-xl relative overflow-hidden shadow-2xl" id="myths">
+<!-- Huge Watermark "03" in soft gold -->
+<div class="pointer-events-none select-none absolute -left-6 -bottom-16 font-display-lg text-[280px] text-secondary-container/10 leading-none font-normal">
+      03
+    </div>
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin relative z-10">
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold block mb-space-xs">
+          03 — MONEY MYTHS
+        </span>
+<h2 class="font-display-lg text-headline-lg text-[#FDF9EF] leading-tight">
+          Four things we believed. <span class="italic text-secondary-fixed font-headline-lg">Tap a card.</span>
+</h2>
+<p class="font-body-md text-body-md text-[#98D3B9] max-w-xl mt-1">
+          Click any card to flip the myth and reveal the architectural reality behind it.
+        </p>
+</div>
+<!-- 2x2 Grid of Interactive Flip Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Flip Card 1 -->
+<div class="myth-card cursor-pointer h-56 [perspective:1000px]" onclick="this.classList.toggle('flipped')">
+<div class="relative w-full h-full duration-500 [transform-style:preserve-3d] card-inner transition-transform rounded-xl">
+<!-- Front (Myth) -->
+<div class="absolute inset-0 bg-[#0B4A37] p-space-md rounded-xl shadow-lg flex flex-col justify-between [backface-visibility:hidden]">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold block mb-space-xs">MYTH #1</span>
+<p class="font-headline-sm text-headline-sm text-[#FDF9EF] italic leading-snug">
+                  “Saving means having money left over at the end of the month.”
+                </p>
+</div>
+<div class="flex items-center justify-between text-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider pt-2">
+<span>Click to reveal reality</span>
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+</div>
+</div>
+<!-- Back (Reality) -->
+<div class="absolute inset-0 bg-[#FDF9EF] text-on-surface p-space-md rounded-xl shadow-lg flex flex-col justify-between [transform:rotateY(180deg)] [backface-visibility:hidden]">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold block mb-space-xs">REALITY #1</span>
+<p class="font-body-md text-body-md text-primary font-medium leading-relaxed">
+                  Saving is a decision made <strong>before</strong> spending begins, not what survives the end of the cycle. Money with no predetermined job will always find an emergency or impulse to spend itself on.
+                </p>
+</div>
+<div class="text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+                Principle: Pay yourself first
+              </div>
+</div>
+</div>
+</div>
+<!-- Flip Card 2 -->
+<div class="myth-card cursor-pointer h-56 [perspective:1000px]" onclick="this.classList.toggle('flipped')">
+<div class="relative w-full h-full duration-500 [transform-style:preserve-3d] card-inner transition-transform rounded-xl">
+<!-- Front (Myth) -->
+<div class="absolute inset-0 bg-[#0B4A37] p-space-md rounded-xl shadow-lg flex flex-col justify-between [backface-visibility:hidden]">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold block mb-space-xs">MYTH #2</span>
+<p class="font-headline-sm text-headline-sm text-[#FDF9EF] italic leading-snug">
+                  “Borrowing is free as long as I repay on time.”
+                </p>
+</div>
+<div class="flex items-center justify-between text-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider pt-2">
+<span>Click to reveal reality</span>
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+</div>
+</div>
+<!-- Back (Reality) -->
+<div class="absolute inset-0 bg-[#FDF9EF] text-on-surface p-space-md rounded-xl shadow-lg flex flex-col justify-between [transform:rotateY(180deg)] [backface-visibility:hidden]">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold block mb-space-xs">REALITY #2</span>
+<p class="font-body-md text-body-md text-primary font-medium leading-relaxed">
+                  Access fees, rollover administration levies, and transaction tariffs trigger the moment funds leave the server. Instant liquidity is never free; it is simply billed quietly in small fractions.
+                </p>
+</div>
+<div class="text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+                Principle: Total cost of capital
+              </div>
+</div>
+</div>
+</div>
+<!-- Flip Card 3 -->
+<div class="myth-card cursor-pointer h-56 [perspective:1000px]" onclick="this.classList.toggle('flipped')">
+<div class="relative w-full h-full duration-500 [transform-style:preserve-3d] card-inner transition-transform rounded-xl">
+<!-- Front (Myth) -->
+<div class="absolute inset-0 bg-[#0B4A37] p-space-md rounded-xl shadow-lg flex flex-col justify-between [backface-visibility:hidden]">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold block mb-space-xs">MYTH #3</span>
+<p class="font-headline-sm text-headline-sm text-[#FDF9EF] italic leading-snug">
+                  “Talking about money with family is rude.”
+                </p>
+</div>
+<div class="flex items-center justify-between text-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider pt-2">
+<span>Click to reveal reality</span>
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+</div>
+</div>
+<!-- Back (Reality) -->
+<div class="absolute inset-0 bg-[#FDF9EF] text-on-surface p-space-md rounded-xl shadow-lg flex flex-col justify-between [transform:rotateY(180deg)] [backface-visibility:hidden]">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold block mb-space-xs">REALITY #3</span>
+<p class="font-body-md text-body-md text-primary font-medium leading-relaxed">
+                  Silence is how financial anxiety, blind assumptions, and systemic bad habits get passed down across generations. Transparent family dialogue is protection, not disrespect.
+                </p>
+</div>
+<div class="text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+                Principle: Household transparency
+              </div>
+</div>
+</div>
+</div>
+<!-- Flip Card 4 -->
+<div class="myth-card cursor-pointer h-56 [perspective:1000px]" onclick="this.classList.toggle('flipped')">
+<div class="relative w-full h-full duration-500 [transform-style:preserve-3d] card-inner transition-transform rounded-xl">
+<!-- Front (Myth) -->
+<div class="absolute inset-0 bg-[#0B4A37] p-space-md rounded-xl shadow-lg flex flex-col justify-between [backface-visibility:hidden]">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold block mb-space-xs">MYTH #4</span>
+<p class="font-headline-sm text-headline-sm text-[#FDF9EF] italic leading-snug">
+                  “A budget means you can’t enjoy anything.”
+                </p>
+</div>
+<div class="flex items-center justify-between text-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider pt-2">
+<span>Click to reveal reality</span>
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+</div>
+</div>
+<!-- Back (Reality) -->
+<div class="absolute inset-0 bg-[#FDF9EF] text-on-surface p-space-md rounded-xl shadow-lg flex flex-col justify-between [transform:rotateY(180deg)] [backface-visibility:hidden]">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold block mb-space-xs">REALITY #4</span>
+<p class="font-body-md text-body-md text-primary font-medium leading-relaxed">
+                  A budget protects your fun without guilt. When you assign 200 shillings to entertainment ahead of time, spending it is an intentional plan, not a secret regret.
+                </p>
+</div>
+<div class="text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+                Principle: Guilt-free allocation
+              </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. 04 — WHAT THIS IS / WHAT THIS ISN'T -->
+<section class="relative w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl overflow-hidden">
+<!-- Huge Watermark 04 -->
+<div class="pointer-events-none select-none absolute right-2 -top-16 font-display-lg text-[280px] text-surface-container-high/40 leading-none font-normal">
+      04
+    </div>
+<div class="relative z-10 mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold block mb-space-xs">
+        04 — CLARITY OF PURPOSE
+      </span>
+<h2 class="font-headline-lg text-headline-lg text-primary leading-tight">
+        A website, not an app. On purpose.
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+        We didn't build software to hold your money. We built reading material to strengthen your judgment before anyone asks for it.
+      </p>
+</div>
+<!-- Side-by-Side Comparison -->
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- What this is -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md">
+<div class="flex items-center gap-space-xs pb-space-sm mb-space-md">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<h3 class="font-headline-sm text-headline-sm text-primary">What this is</h3>
+</div>
+<ul class="space-y-space-md">
+<li class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<div>
+<strong class="font-body-md text-body-md text-primary block">Plain-language explanations</strong>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Written without bankers' jargon, academic abstractions, or patronizing moral lessons.</span>
+</div>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<div>
+<strong class="font-body-md text-body-md text-primary block">Real Kenyan context</strong>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Centered on M-Pesa statements, daily chama rosters, matatu fluctuations, and boda-boda leases.</span>
+</div>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<div>
+<strong class="font-body-md text-body-md text-primary block">Questions you can ask adults</strong>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Concrete scripts and questions to start respectful conversations at home without sounding confrontational.</span>
+</div>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<div>
+<strong class="font-body-md text-body-md text-primary block">Student written &amp; reviewed</strong>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Researched, drafted, and tested by teenagers across secondary schools before publication.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- What this isn't -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs pb-space-sm mb-space-md">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary">What this isn't</h3>
+</div>
+<ul class="space-y-space-md">
+<li class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</span>
+<div>
+<strong class="font-body-md text-body-md text-on-surface block">A banking app or wallet</strong>
+<span class="font-body-sm text-body-sm text-on-surface-variant">We never collect credentials, connect phone numbers, or move funds between accounts.</span>
+</div>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</span>
+<div>
+<strong class="font-body-md text-body-md text-on-surface block">A savings or loan calculator</strong>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Calculators give formulas; our aim is contextual clarity and behavioural intuition.</span>
+</div>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</span>
+<div>
+<strong class="font-body-md text-body-md text-on-surface block">Formal financial advice</strong>
+<span class="font-body-sm text-body-sm text-on-surface-variant">We are students documenting lived experiences, not certified financial intermediaries or brokers.</span>
+</div>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</span>
+<div>
+<strong class="font-body-md text-body-md text-on-surface block">A get-rich-quick plan</strong>
+<span class="font-body-sm text-body-sm text-on-surface-variant">No crypto drops, forex trading signals, or artificial promises of overnight wealth.</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- 7. 05 — VOICES -->
+<section class="relative w-full bg-surface-container py-space-xl overflow-hidden shadow-inner" id="voices">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin relative">
+<!-- Huge Watermark 05 -->
+<div class="pointer-events-none select-none absolute left-4 -top-16 font-display-lg text-[280px] text-surface-container-high/60 leading-none font-normal">
+        05
+      </div>
+<div class="relative z-10 mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold block mb-space-xs">
+          05 — FIELD VOICES
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-primary leading-tight">
+          What people our age actually said.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+          Unfiltered quotes recorded across student discussion circles during our preliminary Nairobi, Kisumu, and Mombasa listening sessions.
+        </p>
+</div>
+<!-- 3 Quote Cards Grid -->
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Quote Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between relative overflow-hidden">
+<div class="font-display-lg text-[72px] text-secondary-fixed-dim/40 leading-none select-none -mb-6">“</div>
+<p class="font-headline-sm text-headline-sm italic text-primary leading-relaxed mb-space-md relative z-10">
+            I know how to send money. I don't know what happens if I don't pay Fuliza back.
+          </p>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Form 3 · Nairobi</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<!-- Quote Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between relative overflow-hidden">
+<div class="font-display-lg text-[72px] text-secondary-fixed-dim/40 leading-none select-none -mb-6">“</div>
+<p class="font-headline-sm text-headline-sm italic text-primary leading-relaxed mb-space-md relative z-10">
+            My mum says 'tumia vizuri' and I never know what that means exactly.
+          </p>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Form 2 · Kisumu</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<!-- Quote Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between relative overflow-hidden">
+<div class="font-display-lg text-[72px] text-secondary-fixed-dim/40 leading-none select-none -mb-6">“</div>
+<p class="font-headline-sm text-headline-sm italic text-primary leading-relaxed mb-space-md relative z-10">
+            We learned about budgeting in Business Studies. It had nothing to do with my life.
+          </p>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Form 4 · Mombasa</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. 06 — ROADMAP & 07 — JOIN THE PROJECT -->
+<section class="relative w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl overflow-hidden" id="join">
+<!-- Roadmap Milestone Tracker -->
+<div class="mb-space-xl bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold block mb-space-xs">
+          06 — PROGRESS ROADMAP
+        </span>
+<h3 class="font-headline-md text-headline-md text-primary">Where the research stands</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
+<!-- Step 1 -->
+<div class="relative pl-space-md">
+<div class="absolute left-0 top-1 w-3 h-3 rounded-full bg-primary-container"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold block mb-1">PHASE 1 · COMPLETE</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1">Listen</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Conducted 45 anonymous student interviews across secondary schools in Nairobi and Kisumu.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative pl-space-md">
+<div class="absolute left-0 top-1 w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold block mb-1">PHASE 2 · IN PROGRESS</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1">Build</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Drafting the 6 core explanatory topic guides with Kenyan financial analysts and educators.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative pl-space-md">
+<div class="absolute left-0 top-1 w-3 h-3 rounded-full bg-outline-variant"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold block mb-1">PHASE 3 · NEXT</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1">Open it up</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Releasing printable ledger zines and digital reader packs for Form 1-4 school clubs nationwide.</p>
+</div>
+</div>
+</div>
+<!-- Join Split Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Copy & Benefits -->
+<div class="lg:col-span-5 pr-0 lg:pr-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold block mb-space-xs">
+          07 — PARTICIPATE
+        </span>
+<h2 class="font-display-lg text-headline-lg text-primary leading-tight mb-space-md">
+          Join the project.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-space-lg leading-relaxed">
+          If you are a student in Kenya aged 14 to 17, your honest point of view matters. Tell us what money topic leaves you completely puzzled.
+        </p>
+<!-- Benefits List -->
+<div class="space-y-space-sm mb-space-lg">
+<div class="flex items-center gap-space-xs text-body-md font-body-md text-primary">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Get the first printable release sent to you directly</span>
+</div>
+<div class="flex items-center gap-space-xs text-body-md font-body-md text-primary">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Shape which real-life questions we solve next</span>
+</div>
+<div class="flex items-center gap-space-xs text-body-md font-body-md text-primary">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Completely anonymous — no real names required</span>
+</div>
+</div>
+<!-- Time Indicator -->
+<div class="inline-flex items-center gap-2 bg-surface-container px-space-sm py-1.5 rounded-full text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span>Takes about 2 minutes · For ages 14–17 in Kenya</span>
+</div>
+</div>
+<!-- Right Form Card -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md">
+<form class="space-y-space-md" id="student-form" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden');">
+<!-- First Name & Email -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-primary block" for="first-name">
+                  First name or nickname
+                </label>
+<input class="w-full bg-surface p-2.5 rounded text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="first-name" placeholder="e.g. Brian" required="" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-primary block" for="student-email">
+                  Email (or parent’s email)
+                </label>
+<input class="w-full bg-surface p-2.5 rounded text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="student-email" placeholder="name@example.com" required="" type="email"/>
+</div>
+</div>
+<!-- Age Segmented Radio -->
+<div class="space-y-1.5">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary block">Your Age</span>
+<div class="grid grid-cols-4 gap-2">
+<label class="cursor-pointer">
+<input class="peer sr-only" name="age" type="radio" value="14"/>
+<div class="p-2 text-center rounded bg-surface peer-checked:bg-primary peer-checked:text-on-primary font-label-lg text-label-lg transition-colors shadow-xs">
+                    14
+                  </div>
+</label>
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="age" type="radio" value="15"/>
+<div class="p-2 text-center rounded bg-surface peer-checked:bg-primary peer-checked:text-on-primary font-label-lg text-label-lg transition-colors shadow-xs">
+                    15
+                  </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="age" type="radio" value="16"/>
+<div class="p-2 text-center rounded bg-surface peer-checked:bg-primary peer-checked:text-on-primary font-label-lg text-label-lg transition-colors shadow-xs">
+                    16
+                  </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="age" type="radio" value="17"/>
+<div class="p-2 text-center rounded bg-surface peer-checked:bg-primary peer-checked:text-on-primary font-label-lg text-label-lg transition-colors shadow-xs">
+                    17
+                  </div>
+</label>
+</div>
+</div>
+<!-- County Selector -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-primary block" for="county">
+                County in Kenya
+              </label>
+<select class="w-full bg-surface p-2.5 rounded text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="county">
+<option value="nairobi">Nairobi</option>
+<option value="mombasa">Mombasa</option>
+<option value="kisumu">Kisumu</option>
+<option value="nakuru">Nakuru</option>
+<option value="kiambu">Kiambu</option>
+<option value="uasin-gishu">Uasin Gishu (Eldoret)</option>
+<option value="machakos">Machakos</option>
+<option value="kilifi">Kilifi</option>
+<option value="other">Other County</option>
+</select>
+</div>
+<!-- Open Question Textarea -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-primary block" for="dilemma-text">
+                What do you wish someone had explained?
+              </label>
+<textarea class="w-full bg-surface p-2.5 rounded text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="dilemma-text" placeholder="Tell us about a transaction, fee, or conversation at home that made no sense..." rows="3"></textarea>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic">Feel free to speak freely; this directly influences our curriculum notes.</span>
+</div>
+<!-- Submit Button -->
+<button class="w-full py-3.5 bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded shadow-md transition-all duration-200 flex items-center justify-center gap-2" type="submit">
+<span>Send my answer</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<!-- Success Alert Placeholder -->
+<div class="hidden p-space-sm bg-primary-fixed/30 rounded text-primary text-body-md font-body-md flex items-center gap-2" id="form-feedback">
+<span class="material-symbols-outlined text-primary-container">task_alt</span>
+<span>Asante! Your contribution has been safely logged in our student ledger.</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Dynamic smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-low text-on-surface relative overflow-hidden mt-space-xl"><div class="pointer-events-none select-none absolute -right-6 -bottom-16 font-display-lg text-[220px] text-surface-container-high/40 leading-none font-normal">K</div><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg relative z-10"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg pb-space-xl"><div class="md:col-span-6 pr-0 md:pr-space-xl flex flex-col justify-between"><div class="space-y-space-sm"><div class="flex items-center gap-space-xs"><div class="w-7 h-7 rounded bg-primary-container text-secondary-fixed flex items-center justify-center font-headline-sm text-body-lg font-semibold">K</div><span class="font-headline-md text-headline-sm font-semibold text-primary tracking-tight">Kesho</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">A student-built project exploring the gap between watching money happen and understanding it — for 14 to 17 year olds in Kenya.</p></div><div class="mt-space-md"><span class="font-label-sm text-label-sm uppercase text-secondary tracking-widest block">NAIROBI · MOMBASA · KISUMU</span></div></div><div class="md:col-span-3 space-y-space-sm"><h3 class="font-label-md text-label-md uppercase tracking-wider text-primary">Explore</h3><ul class="space-y-space-xs"><li role="none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors block py-0.5" data-path="the-gap" href="#">The gap</a></li><li role="none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors block py-0.5" data-path="topics" href="#">Topics</a></li><li role="none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors block py-0.5" data-path="myths" href="#">Myths &amp; Realities</a></li><li role="none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors block py-0.5" data-path="voices" href="#">Youth Voices</a></li></ul></div><div class="md:col-span-3 space-y-space-sm"><h3 class="font-label-md text-label-md uppercase tracking-wider text-primary">Project</h3><ul class="space-y-space-xs"><li role="none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors block py-0.5" data-path="about" href="#">About Kesho</a></li><li role="none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors block py-0.5" data-path="join-the-project" href="#">Join the project</a></li><li role="none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors block py-0.5" data-path="student-manifesto" href="#">Student Manifesto</a></li><li role="none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors block py-0.5" data-path="curriculum-notes" href="#">Curriculum Notes</a></li></ul></div></div><div class="pt-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm text-on-surface-variant"><p class="font-body-sm text-body-sm">© 2026 Kesho Project · Built by students in Kenya</p><p class="font-body-sm text-body-sm italic text-secondary">A student project. Not financial advice.</p></div></div></footer></body></html>
