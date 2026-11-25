@@ -1,593 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kesho — Financial thinking for Kenyan teenagers</title>
-<meta name="description" content="A student-built guide to financial thinking for 14–17 year olds in Kenya. Not a banking app. Not a calculator. Just the things nobody said out loud.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter:wght@300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1fcf1">
+  <meta name="description" content="Explore how Kenyan chamas pool money, build trust, and grow collective wealth with this interactive financial literacy guide.">
+  <title>ShilingiLab — Chama &amp; Collective Wealth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<div class="grain" aria-hidden="true"></div>
-
-<!-- ============ NAV ============ -->
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a href="#top" class="brand">
-      <span class="brand-mark" aria-hidden="true">K</span>
-      <span class="brand-name">Kesho<small>Financial Literacy Project</small></span>
-    </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#gap">The gap</a>
-      <a href="#topics">Topics</a>
-      <a href="#myths">Myths</a>
-      <a href="#voices">Voices</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="ShilingiLab home"><span class="brand-mark">S</span><span><strong>ShilingiLab</strong><small>Financial thinking for Kenya</small></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Explore Hub</a><a href="#simulator">M-Pesa &amp; Debt</a><a class="nav-active" href="#simulator" aria-current="location">Chama &amp; Collective</a><a href="#stories">Pocket Money Sandbox</a>
     </nav>
-    <div class="nav-cta">
-      <a href="#topics" class="btn btn-ghost btn-sm">Explore</a>
-      <a href="#join" class="btn btn-primary btn-sm">
-        Join the project
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#gap">The gap</a>
-  <a href="#topics">Topics</a>
-  <a href="#myths">Money myths</a>
-  <a href="#voices">Voices</a>
-  <a href="#join">Join the project</a>
-</div>
-
-<main id="top">
-
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="hero-decor" aria-hidden="true">
-      <div class="hero-dots"></div>
-      <div class="hero-orb hero-orb-a"></div>
-      <div class="hero-orb hero-orb-b"></div>
-      <div class="hero-mark">K</div>
-    </div>
-
-    <div class="wrap hero-grid">
-      <div class="hero-copy reveal">
-        <span class="eyebrow">A student research project · Kenya</span>
-        <h1>Everyone is using money. <em>Nobody is explaining it.</em></h1>
-        <p class="hero-sub">
-          A student-built guide to financial thinking for 14–17 year olds in Kenya.
-          Not a banking app. Not a savings calculator. Just the things we wish
-          someone had said out loud.
-        </p>
-        <div class="hero-actions">
-          <a href="#topics" class="btn btn-primary">
-            Explore the topics
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a href="#gap" class="btn btn-ghost">Read what we found</a>
-        </div>
-        <div class="hero-meta">
-          <span>Built by students</span><span class="dot"></span>
-          <span>Nairobi · Kisumu · Mombasa</span><span class="dot"></span>
-          <span>2026</span>
+    <div class="header-actions"><button class="search-button" type="button" aria-label="Search this learning guide">⌕ <span>Bonga Search</span></button><span class="currency">KES <b>KSh</b></span><div class="profile-button"><span class="avatar" aria-hidden="true">A</span><span>Amina K.<small>Form 3 · Lenana Zone</small></span></div></div>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </header>
+  <div class="announcement"><span>✳ Mental Model Sandbox: Peer-tested financial heuristics for East African realities</span><span class="announcement-status"><i></i> Live simulator active <b>·</b> Term 2 spending tracker</span></div>
+  <main class="container" id="home">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#home">Home</a><span>›</span><a href="#comparison">Deep Dives</a><span>›</span><strong>Chama Dynamics</strong></nav>
+    <section class="hero">
+      <div class="hero-copy"><span class="eyebrow">♧ Kenyan communal wealth protocol</span><h1>The Anatomy of a Chama: How Social Trust Built Kenya’s Economy</h1><p>Your mother meets her friends every last Sunday of the month with a ledger notebook. Here is the mathematical and human engine driving table banking, merry-go-rounds, and pooled capital.</p><div class="trust-pills"><span>◉ Collective Collateral</span><span>↻ 100% Interest Recirculation</span><span>♧ Youth Tested</span></div></div>
+      <aside class="macro-card"><span class="overline">Macro reality</span><strong>KES 300B+</strong><p>Estimated capital held and cycled annually in Kenyan registered and informal chamas—roughly 30% of total national household savings.</p><div class="source">Source: Kenya National Federation <span>◉</span></div></aside>
+    </section>
+    <section class="simulator panel" id="simulator" aria-labelledby="sim-title">
+      <div class="section-heading simulator-heading"><div><span class="section-kicker">Simulator lab</span><h2 id="sim-title">Interactive Chama Lifecycle Engine</h2><p>Click each stage to toggle money flow vectors, member payouts, and interest loops.</p></div><span class="live-badge"><i></i> Simulation: 10 members · KES 2,000 / mo</span></div>
+      <div class="stage-tabs" role="tablist" aria-label="Chama lifecycle stages">
+        <button class="stage-tab active" id="stage-tab-1" role="tab" aria-controls="stage-panel" aria-selected="true" tabindex="0" data-stage="1"><small>Stage 1</small>Pooling (Umoja)</button>
+        <button class="stage-tab" id="stage-tab-2" role="tab" aria-controls="stage-panel" aria-selected="false" tabindex="-1" data-stage="2"><small>Stage 2</small>Merry-Go-Round</button>
+        <button class="stage-tab" id="stage-tab-3" role="tab" aria-controls="stage-panel" aria-selected="false" tabindex="-1" data-stage="3"><small>Stage 3</small>Table Banking</button>
+        <button class="stage-tab" id="stage-tab-4" role="tab" aria-controls="stage-panel" aria-selected="false" tabindex="-1" data-stage="4"><small>Stage 4</small>Social Collateral</button>
+      </div>
+      <div class="simulator-grid">
+        <div class="network-card"><svg class="network" viewBox="0 0 400 400" role="img" aria-label="Ten chama members connected to a shared central fund">
+          <g class="connectors" aria-hidden="true"><line x1="200" y1="200" x2="200" y2="50"/><line x1="200" y1="200" x2="288" y2="78"/><line x1="200" y1="200" x2="342" y2="153"/><line x1="200" y1="200" x2="342" y2="247"/><line x1="200" y1="200" x2="288" y2="322"/><line x1="200" y1="200" x2="200" y2="350"/><line x1="200" y1="200" x2="112" y2="322"/><line x1="200" y1="200" x2="58" y2="247"/><line x1="200" y1="200" x2="58" y2="153"/><line x1="200" y1="200" x2="112" y2="78"/></g>
+          <circle class="pot-ring" cx="200" cy="200" r="63"/><circle class="pot" cx="200" cy="200" r="54"/><text class="pot-label" x="200" y="194">CENTRAL POT</text><text class="pot-value" id="pot-value" x="200" y="216">KES 20,000</text>
+          <g class="member active-member" transform="translate(200 50)"><circle r="20"/><text y="4">M1</text></g><g class="member" transform="translate(288 78)"><circle r="18"/><text y="4">M2</text></g><g class="member" transform="translate(342 153)"><circle r="18"/><text y="4">M3</text></g><g class="member" transform="translate(342 247)"><circle r="18"/><text y="4">M4</text></g><g class="member" transform="translate(288 322)"><circle r="18"/><text y="4">M5</text></g><g class="member" transform="translate(200 350)"><circle r="18"/><text y="4">M6</text></g><g class="member" transform="translate(112 322)"><circle r="18"/><text y="4">M7</text></g><g class="member" transform="translate(58 247)"><circle r="18"/><text y="4">M8</text></g><g class="member" transform="translate(58 153)"><circle r="18"/><text y="4">M9</text></g><g class="member" transform="translate(112 78)"><circle r="18"/><text y="4">M10</text></g>
+        </svg><p class="diagram-note" id="stage-indicator">↔ Month 1: All 10 send KES 2,000 into the pool</p></div>
+        <div class="stage-details" id="stage-panel" role="tabpanel" aria-labelledby="stage-tab-1" tabindex="0"><article class="stage-description"><span class="stage-badge" id="stage-badge">Stage 1: Pooling mechanics</span><h3 id="stage-title">Umoja: The Power of Aggregation</h3><p id="stage-description">Individually, saving KES 2,000 a month feels painfully slow. Ten friends commit to the same goal, creating an instant lump sum of KES 20,000 every 30 days. No bank bureaucracy, zero account ledger maintenance fees.</p></article>
+          <div class="stats"><article><span>Individual burden</span><strong id="burden">KES 2,000/mo</strong><small>Predictable outlay</small></article><article><span>Capital power</span><strong id="power">KES 20,000</strong><small>Single recipient/cycle</small></article></div>
+          <article class="lesson"><strong>☼ Mental Model: “Forced Discipline”</strong><p id="lesson">Saving solo on M-Pesa is risky because Fuliza or temptation strikes easily. A Chama acts as a human smart-contract: missing a payment means letting down 9 real peers.</p></article>
         </div>
       </div>
-
-      <div class="ledger-wrap reveal">
-        <div class="ledger">
-          <div class="ledger-badge" aria-hidden="true">?</div>
-          <div class="ledger-head">
-            <span class="ledger-title">A week in money</span>
-            <span class="ledger-tag">Form 2 · Nairobi</span>
-          </div>
-          <ul class="ledger-list">
-            <li><span class="l-label">Matatu to school</span><span class="l-amt">− 60</span></li>
-            <li><span class="l-label">Data bundle</span><span class="l-amt">− 50</span></li>
-            <li><span class="l-label">Lunch, three days</span><span class="l-amt">− 120</span></li>
-            <li><span class="l-label">Mum sends “tumia vizuri”</span><span class="l-amt pos">+ 500</span></li>
-            <li><span class="l-label">Cousin’s chama contribution</span><span class="l-amt">− 100</span></li>
-          </ul>
-          <div class="ledger-q">
-            <span class="q-label">Aunt asks for a “small loan”</span>
-            <span class="q-note">Nobody explained how to say no. Or whether to.</span>
-          </div>
-        </div>
+    </section>
+    <section class="content-section" id="comparison"><div class="section-heading"><div><span class="section-kicker">Decision heuristic</span><h2>Chama vs Commercial Bank vs Ponzi Trap</h2><p>Spot the crucial difference between legitimate community-backed mutual wealth and algorithmic WhatsApp scam groups targeting teens.</p></div></div>
+      <div class="comparison-grid">
+        <article class="comparison-card"><header><span class="category-tag mint">Social trust</span><span class="card-symbol">♧</span></header><h3>Merry-Go-Round &amp; Table Bank</h3><p>Built on kinship, classmates, church fellowship, or neighborhood business owners.</p><ul><li><b>Collateral:</b> Character, peer reputation, and social guarantee.</li><li><b>Interest flow:</b> 100% of micro-loan interest stays inside and gets shared back.</li><li><b>Transparency:</b> Physical notebook or WhatsApp PDF visible to all at Sunday meetings.</li><li><b>Safety net:</b> Compassionate extensions for genuine emergencies.</li></ul><div class="verdict"><b>Teen verdict</b>Ideal for shared tools, school supplies, or business seed cash.</div></article>
+        <article class="comparison-card"><header><span class="category-tag neutral">Formal system</span><span class="card-symbol">⌂</span></header><h3>Commercial Bank / Micro-Lender</h3><p>Centralized financial institutions regulated by CBK, driven by institutional credit scoring.</p><ul><li><b>Collateral:</b> Fixed assets, guarantors, or credit history.</li><li><b>Interest flow:</b> Interest supports the institution and its shareholders.</li><li><b>Transparency:</b> Automated digital statements and documented terms.</li><li><b>Safety net:</b> Formal repayment terms and customer protections.</li></ul><div class="verdict"><b>Teen verdict</b>Necessary for custody of large sums once age and needs fit.</div></article>
+        <article class="comparison-card scam-card"><header><span class="category-tag red">Scam alert</span><span class="card-symbol">△</span></header><h3>TikTok &amp; WhatsApp “Matrix” Ponzi</h3><p>Predatory pyramid schemes masquerading as “Youth Empowerment Groups” and instant Forex circles.</p><ul><li><b>Red flag:</b> KES 1,000 turns into KES 4,000 in days guaranteed.</li><li><b>Red flag:</b> No business, product, or verifiable activity.</li><li><b>Red flag:</b> Recruit others to “unlock payout.”</li><li><b>The math:</b> Newcomers’ money pays earlier participants.</li></ul><div class="verdict warning"><b>Defensive rule</b>If returns exceed 15% monthly with no physical trade, it’s a theft trap.</div></article>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ TICKER ============ -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <div class="ticker-group">
-        <span class="ticker-item">M-Pesa</span><span class="ticker-item">Chama</span>
-        <span class="ticker-item">Fuliza</span><span class="ticker-item">Black tax</span>
-        <span class="ticker-item">Matatu fare</span><span class="ticker-item">Data bundles</span>
-        <span class="ticker-item">Loan apps</span><span class="ticker-item">Betting odds</span>
-        <span class="ticker-item">Savings groups</span><span class="ticker-item">Hustle income</span>
-        <span class="ticker-item">Interest rates</span><span class="ticker-item">Family money</span>
+    </section>
+    <section class="content-section" id="stories"><div class="section-heading"><div><span class="section-kicker">Applied field notes</span><h2>Real High School Hustle Chamas</h2><p>How Kenyan students apply collective table-banking to launch equipment-heavy creative side hustles.</p></div></div>
+      <div class="stories-grid">
+        <article class="story-card"><div class="story-copy"><span class="case-label">Case 01</span><span class="story-school">St. Mary’s Boys · Form 3</span><h3>The Lens &amp; Lighting Micro-Chama</h3><p>Four day-scholars passionate about sports photography couldn’t afford a Canon lens alone.</p></div><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVwmbCzPxHiEC_sj96Vjgt72qAOZrfBc0KrujmDFHofGzTT6ayXZVpEu7Ks5Rn9uIKqMrYz5rwRo2NIR-9jIdYO5967Y2vuC-xAagLVavdJOFJbe3k4erKAGVa07eEgujMdjPd9y0aOVUqOEU6jUsyxiQ1plwMrGSfqYW253uWyb1xWWWlIOHNedWZGuiyCZarcWIG3XXemv8F1S0ifhX4BMuL63hBb6XP89mN7FbI" alt="Students collaborating around a camera for their school photography chama" loading="lazy"><div class="story-data"><p><span>Monthly contribution</span><b>KES 500 per boy</b></p><p><span>Duration to purchase</span><b>8 months (2 terms)</b></p><p><span>Revenue generated</span><b>KES 3,500/weekend</b></p><div class="story-rule"><b>The Chama Rule:</b> Equipment stays in the school art club locker during weekdays. Weekend rental fees go directly to the maintenance fund.</div></div></article>
+        <article class="story-card"><div class="story-copy"><span class="case-label">Case 02</span><span class="story-school">Precious Blood Riruta · Form 4</span><h3>Grace’s KCSE Revision &amp; Toner Ring</h3><p>Mock papers and past national examination booklets cost KES 300 to KES 800 per subject.</p></div><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl4yqx-rskGWdBpo6OlxP4yTtI9tdhYI5EaCav2aWmnyzpM4tcEch7KY7uGum4Zv58eWQvCWX8uVUpAMuH9ssmcxSxNLYvDBJ4amyvvRDzcAkekAlEDIPR_LfvsgPDZqLWAstKzm6j3zw35uunk8CHVuszKwWNl8r_mVVa-xGXIEY_I0uwug6-ZL6BH8hpg9yuNVw__RaEDKnQgJ-NEgTPhlRfTLCbFupRfyOOPu44" alt="Two students studying together with revision papers and shared supplies" loading="lazy"><div class="story-data"><p><span>Weekly contribution</span><b>KES 100 per member</b></p><p><span>Pooled strategy</span><b>Shared mock papers and toner</b></p><p><span>End of term surplus</span><b>KES 2,400 split equally</b></p><div class="story-rule"><b>The Chama Rule:</b> Two members validate every purchase slip whenever paper or ink is bought.</div></div></article>
       </div>
-      <div class="ticker-group">
-        <span class="ticker-item">M-Pesa</span><span class="ticker-item">Chama</span>
-        <span class="ticker-item">Fuliza</span><span class="ticker-item">Black tax</span>
-        <span class="ticker-item">Matatu fare</span><span class="ticker-item">Data bundles</span>
-        <span class="ticker-item">Loan apps</span><span class="ticker-item">Betting odds</span>
-        <span class="ticker-item">Savings groups</span><span class="ticker-item">Hustle income</span>
-        <span class="ticker-item">Interest rates</span><span class="ticker-item">Family money</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============ 01 THE GAP ============ -->
-  <section class="sec" id="gap" data-num="01">
-    <div class="wrap split">
-      <div class="reveal">
-        <span class="eyebrow">01 — The gap</span>
-        <h2 style="margin-top:1rem">Watching money happen is not the same as understanding it.</h2>
-        <p style="margin-top:1.15rem;font-size:1.04rem;max-width:46ch">
-          Teenagers in Kenya grow up surrounded by financial decisions — borrowing,
-          saving, spending, planning. But almost none of it is explained in a way that
-          connects to a 15-year-old’s actual life.
-        </p>
-        <p style="margin-top:1rem;max-width:46ch">
-          The concepts live in textbooks and in adult conversations. The understanding
-          rarely makes it across. That gap is what this project is about.
-        </p>
-      </div>
-
-      <div class="obs">
-        <article class="obs-card reveal">
-          <span class="obs-num">1</span>
-          <div>
-            <h3>We see the transaction, not the thinking</h3>
-            <p>A parent sends M-Pesa. A cousin borrows. An aunt joins a chama. The decisions are visible — the reasoning behind them is not.</p>
-          </div>
-        </article>
-        <article class="obs-card reveal">
-          <span class="obs-num">2</span>
-          <div>
-            <h3>The words don’t match the life</h3>
-            <p>Budgeting, interest, collateral — taught in the abstract, and applied nowhere near a matatu fare or a 50-bob data bundle.</p>
-          </div>
-        </article>
-        <article class="obs-card reveal">
-          <span class="obs-num">3</span>
-          <div>
-            <h3>Confidence arrives too late</h3>
-            <p>By the time money starts to feel legible, the first real decisions have usually already been made — sometimes with a fee attached.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 02 TOPICS ============ -->
-  <section class="sec sec-tint" id="topics" data-num="02">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">02 — What we’re exploring</span>
-        <h2>Six things nobody explained properly.</h2>
-        <p>These came up again and again in our conversations. They are not chapters from a textbook — they are the questions people our age actually ask.</p>
-      </div>
-
-      <div class="topics">
-        <article class="topic reveal">
-          <span class="topic-num">01</span>
-          <h3>M-Pesa isn’t a wallet</h3>
-          <p>It’s a door. Understanding where money actually goes after the green message is the first unlock — and the one most people skip.</p>
-        </article>
-        <article class="topic reveal">
-          <span class="topic-num">02</span>
-          <h3>The interest you don’t see</h3>
-          <p>Fuliza, loan apps and “small” borrowing. What really happens when you repay late, and why the fee is charged before you notice it.</p>
-        </article>
-        <article class="topic reveal">
-          <span class="topic-num">03</span>
-          <h3>Chamas &amp; savings groups</h3>
-          <p>The most common financial institution in Kenya, and the least explained to young people. Who holds the money, and who decides?</p>
-        </article>
-        <article class="topic reveal">
-          <span class="topic-num">04</span>
-          <h3>Black tax &amp; family money</h3>
-          <p>The unwritten rules about who you support, when, and how much. Nobody signs a contract, but everybody feels it.</p>
-        </article>
-        <article class="topic reveal">
-          <span class="topic-num">05</span>
-          <h3>The hustle economy</h3>
-          <p>Irregular income, side gigs and term-time work. Why “budget monthly” doesn’t always fit a life that pays weekly.</p>
-        </article>
-        <article class="topic reveal">
-          <span class="topic-num">06</span>
-          <h3>Betting &amp; the big win</h3>
-          <p>Why the odds feel different than they are, and how a near-miss is designed to feel like a signal.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 03 MYTHS ============ -->
-  <section class="sec sec-dark" id="myths" data-num="03">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">03 — Money myths</span>
-        <h2 style="color:#F7F2E7">Four things we believed. Tap a card.</h2>
-        <p>We did too. That’s the point — these aren’t stupid ideas, they’re just ideas nobody corrected.</p>
-      </div>
-
-      <div class="myths">
-        <div class="myth reveal" tabindex="0" role="button" aria-pressed="false" aria-label="Myth card: saving means having money left over">
-          <div class="myth-inner">
-            <div class="myth-face myth-front">
-              <span class="myth-tag">Myth</span>
-              <span class="myth-quote">“Saving means having money left over at the end of the month.”</span>
-              <span class="myth-hint">Tap to reveal</span>
-            </div>
-            <div class="myth-face myth-back">
-              <span class="myth-tag">Reality</span>
-              <span class="myth-answer">Saving is a decision you make <em>before</em> spending, not after. KES 20 moved on purpose is a system. KES 2,000 left at month-end is luck.</span>
-              <span class="myth-hint" style="color:#7A5A16">Tap to flip back</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="myth reveal" tabindex="0" role="button" aria-pressed="false" aria-label="Myth card: borrowing is free if you repay on time">
-          <div class="myth-inner">
-            <div class="myth-face myth-front">
-              <span class="myth-tag">Myth</span>
-              <span class="myth-quote">“Borrowing is free as long as I repay on time.”</span>
-              <span class="myth-hint">Tap to reveal</span>
-            </div>
-            <div class="myth-face myth-back">
-              <span class="myth-tag">Reality</span>
-              <span class="myth-answer">The fee is charged when you borrow, not when you’re late. Read the number before you tap — not after the message arrives.</span>
-              <span class="myth-hint" style="color:#7A5A16">Tap to flip back</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="myth reveal" tabindex="0" role="button" aria-pressed="false" aria-label="Myth card: talking about money is rude">
-          <div class="myth-inner">
-            <div class="myth-face myth-front">
-              <span class="myth-tag">Myth</span>
-              <span class="myth-quote">“Talking about money is rude.”</span>
-              <span class="myth-hint">Tap to reveal</span>
-            </div>
-            <div class="myth-face myth-back">
-              <span class="myth-tag">Reality</span>
-              <span class="myth-answer">Silence is how bad money habits get passed down. Naming a price, a fee or a limit is normal. It is not shameful.</span>
-              <span class="myth-hint" style="color:#7A5A16">Tap to flip back</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="myth reveal" tabindex="0" role="button" aria-pressed="false" aria-label="Myth card: a budget means you cannot enjoy anything">
-          <div class="myth-inner">
-            <div class="myth-face myth-front">
-              <span class="myth-tag">Myth</span>
-              <span class="myth-quote">“A budget means you can’t enjoy anything.”</span>
-              <span class="myth-hint">Tap to reveal</span>
-            </div>
-            <div class="myth-face myth-back">
-              <span class="myth-tag">Reality</span>
-              <span class="myth-answer">A budget is a plan for what you’ve decided matters. It protects the fun — it doesn’t remove it.</span>
-              <span class="myth-hint" style="color:#7A5A16">Tap to flip back</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 04 WHAT THIS IS ============ -->
-  <section class="sec" data-num="04">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">04 — What this is</span>
-        <h2>A website, not an app. On purpose.</h2>
-        <p>There are already plenty of tools that will calculate things for you. What’s missing is the thinking underneath the tool.</p>
-      </div>
-
-      <div class="compare">
-        <div class="compare-col reveal">
-          <h3>What this is</h3>
-          <ul>
-            <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Plain-language explanations of money concepts</li>
-            <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Real Kenyan context — M-Pesa, chamas, matatu fares</li>
-            <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Questions you can actually ask an adult</li>
-            <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Written and reviewed by people your age</li>
-          </ul>
-        </div>
-        <div class="compare-col alt reveal">
-          <h3>What this isn’t</h3>
-          <ul>
-            <li><svg class="cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> A banking app</li>
-            <li><svg class="cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> A savings or loan calculator</li>
-            <li><svg class="cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Financial advice</li>
-            <li><svg class="cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> A get-rich-quick plan</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 05 VOICES ============ -->
-  <section class="sec sec-tint" id="voices" data-num="05">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">05 — Voices</span>
-        <h2>What people our age actually said.</h2>
-        <p>Collected during pilot conversations with students across three counties.</p>
-      </div>
-
-      <div class="voices">
-        <article class="voice reveal">
-          <p>I know how to send money. I don’t know what happens if I don’t pay Fuliza back.</p>
-          <div class="voice-who">Form 3<span>Nairobi</span></div>
-        </article>
-        <article class="voice reveal">
-          <p>My mum says “tumia vizuri” and I never know what that means exactly.</p>
-          <div class="voice-who">Form 2<span>Kisumu</span></div>
-        </article>
-        <article class="voice reveal">
-          <p>We learned about budgeting in Business Studies. It had nothing to do with my life.</p>
-          <div class="voice-who">Form 4<span>Mombasa</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 06 ROADMAP ============ -->
-  <section class="sec" data-num="06">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">06 — Where this goes</span>
-        <h2>Built slowly, and in the open.</h2>
-      </div>
-
-      <div class="road">
-        <div class="step done reveal">
-          <div class="step-marker">01</div>
-          <div class="step-body">
-            <h3>Listen <span class="pill live">Complete</span></h3>
-            <p>Conversations with students in Nairobi, Kisumu and Mombasa about the money decisions already in front of them.</p>
-          </div>
-        </div>
-        <div class="step reveal">
-          <div class="step-marker">02</div>
-          <div class="step-body">
-            <h3>Build <span class="pill">In progress</span></h3>
-            <p>Plain-language explainers, one concept at a time. Short, honest, and written for a 15-year-old — not a finance student.</p>
-          </div>
-        </div>
-        <div class="step reveal">
-          <div class="step-marker">03</div>
-          <div class="step-body">
-            <h3>Open it up <span class="pill">Next</span></h3>
-            <p>Student-written, student-reviewed, and free to use. Because confidence at this age shouldn’t depend on who your parents are.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ JOIN ============ -->
-  <section class="join-hero" id="join">
-    <div class="join-decor" aria-hidden="true">
-      <div class="hero-dots"></div>
-      <div class="hero-orb hero-orb-a"></div>
-      <div class="hero-orb hero-orb-b"></div>
-    </div>
-
-    <div class="wrap join-grid">
-
-      <!-- ---------- left: copy ---------- -->
-      <div class="join-copy reveal">
-        <span class="eyebrow">07 — Join the project</span>
-        <h2>Tell us what nobody<br><em>explained to you.</em></h2>
-        <p class="join-sub">
-          Your answer becomes part of the research — and you’ll get the first
-          plain-language guide when it’s ready. No spam, no bank account,
-          no “investment opportunity.” Just the thing you asked about.
-        </p>
-
-        <ul class="perks">
-          <li>
-            <span class="perk-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
-            </span>
-            <div>
-              <strong>Get the first guide</strong>
-              <span>Sent to your email the day it’s published.</span>
-            </div>
-          </li>
-          <li>
-            <span class="perk-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
-            </span>
-            <div>
-              <strong>Shape what we write</strong>
-              <span>Your question decides which topic we build next.</span>
-            </div>
-          </li>
-          <li>
-            <span class="perk-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
-            </span>
-            <div>
-              <strong>Stay anonymous if you want</strong>
-              <span>Only your email is required. Everything else is optional.</span>
-            </div>
-          </li>
-        </ul>
-
-        <div class="join-meta">
-          <span class="join-meta-item">Takes about 2 minutes</span>
-          <span class="dot" aria-hidden="true"></span>
-          <span class="join-meta-item">For ages 14–17 in Kenya</span>
-        </div>
-      </div>
-
-      <!-- ---------- right: form ---------- -->
-      <div class="join-card reveal">
-        <div class="join-card-head">
-          <h2>Join now</h2>
-          <span class="join-card-tag">Free · Student-run</span>
-        </div>
-
-        <form id="joinForm" novalidate>
-
-          <div class="field-row">
-            <div class="field">
-              <label for="name">First name <span class="req">*</span></label>
-              <input type="text" id="name" name="name" placeholder="e.g. Amina" autocomplete="given-name" required>
-              <span class="field-error">Please enter your name.</span>
-            </div>
-
-            <div class="field">
-              <label for="email">Email <span class="req">*</span></label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
-              <span class="field-error">Enter a valid email address.</span>
-            </div>
-          </div>
-
-          <div class="field">
-            <label>How old are you?</label>
-            <div class="segmented">
-              <input type="radio" id="age14" name="age" value="14">
-              <label for="age14">14</label>
-              <input type="radio" id="age15" name="age" value="15">
-              <label for="age15">15</label>
-              <input type="radio" id="age16" name="age" value="16">
-              <label for="age16">16</label>
-              <input type="radio" id="age17" name="age" value="17">
-              <label for="age17">17</label>
-            </div>
-          </div>
-
-          <div class="field-row">
-            <div class="field">
-              <label for="county">County</label>
-              <div class="select-wrap">
-                <select id="county" name="county">
-                  <option value="">Select one</option>
-                  <option>Nairobi</option>
-                  <option>Mombasa</option>
-                  <option>Kisumu</option>
-                  <option>Nakuru</option>
-                  <option>Uasin Gishu</option>
-                  <option>Kiambu</option>
-                  <option>Machakos</option>
-                  <option>Kajiado</option>
-                  <option>Meru</option>
-                  <option>Nyeri</option>
-                  <option>Kilifi</option>
-                  <option>Kakamega</option>
-                  <option>Bungoma</option>
-                  <option>Migori</option>
-                  <option>Siaya</option>
-                  <option>Other</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="phone">Phone <span class="opt">(optional)</span></label>
-              <input type="tel" id="phone" name="phone" placeholder="07XX XXX XXX" autocomplete="tel">
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="question">What do you wish someone had explained? <span class="opt">(optional)</span></label>
-            <textarea id="question" name="question" placeholder="e.g. What actually happens if I don’t pay Fuliza back?"></textarea>
-            <span class="field-hint">One sentence is enough. It becomes a topic.</span>
-          </div>
-
-          <div class="field">
-            <label class="consent">
-              <input type="checkbox" id="consent" name="consent" required>
-              <span>I’m 14–17 and I’m happy to receive occasional emails about this project. <span class="req">*</span></span>
-            </label>
-            <span class="field-error" id="consentError">Please tick the box to continue.</span>
-          </div>
-
-          <button type="submit" class="btn btn-primary join-submit">
-            Send my answer
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </button>
-
-          <p class="join-privacy">
-            We only use your email to send project updates. You can leave at any time.
-          </p>
-        </form>
-
-        <!-- ---------- success state ---------- -->
-        <div class="join-success" id="joinSuccess" hidden>
-          <div class="success-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
-          </div>
-          <h2>You’re in.</h2>
-          <p class="success-text">
-            Thanks, <strong id="successName">friend</strong>. We’ll email
-            <strong id="successEmail">you</strong> when the first guide is ready.
-          </p>
-          <p class="success-note">
-            Your question goes straight into the research pile — it might be the
-            next topic we write.
-          </p>
-          <a href="#top" class="btn btn-ghost">
-            Back to the top
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-  <div class="footer-mark" aria-hidden="true">K</div>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a href="#top" class="brand">
-          <span class="brand-mark" aria-hidden="true">K</span>
-          <span class="brand-name">Kesho<small>Financial Literacy Project</small></span>
-        </a>
-        <p>A student-built project exploring the gap between watching money happen and understanding it — for 14 to 17 year olds in Kenya.</p>
-      </div>
-      <div class="foot-col">
-        <h4>Explore</h4>
-        <a href="#gap">The gap</a>
-        <a href="#topics">Topics</a>
-        <a href="#myths">Money myths</a>
-        <a href="#voices">Voices</a>
-      </div>
-      <div class="foot-col">
-        <h4>Project</h4>
-        <a href="#join">Get involved</a>
-        <a href="#join">Share a question</a>
-        <a href="#gap">Research notes</a>
-        <a href="#top">Back to top</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Kesho Project · Built by students in Kenya</span>
-      <span class="note">A student project. Not financial advice.</span>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+    </section>
+    <section class="audit" aria-labelledby="audit-title"><div class="audit-intro"><span class="section-kicker">Interactive audit</span><h2 id="audit-title">Could You Run a Youth Chama?</h2><p>Social trust is not sentiment; it is rigorous procedure. Tick all 4 pillars to see if your group is ready to pool shilingis without falling out.</p><div class="readiness"><div><span>Group readiness score</span><strong id="score-text">0 / 4 Checked</strong></div><div class="progress-track"><span id="readiness-progress"></span></div><p id="score-feedback" aria-live="polite">Check the protocols to evaluate readiness.</p></div></div>
+      <div class="checklist"><label class="check-item"><input class="chama-check" type="checkbox"><span><b>1. Written &amp; Signed Constitution</b><small>Every member agrees on contribution dates, cycle order, and late-payment rules—in writing.</small></span></label><label class="check-item"><input class="chama-check" type="checkbox"><span><b>2. The 2-Person Dual Sign-off</b><small>Funds are never held on one person’s line. Two trusted members verify every balance.</small></span></label><label class="check-item"><input class="chama-check" type="checkbox"><span><b>3. The Emergency Default Clause</b><small>Agree what happens when pocket money is delayed: a grace period or emergency reserve.</small></span></label><label class="check-item"><input class="chama-check" type="checkbox"><span><b>4. Realistic Contribution Threshold</b><small>Set contributions that fit real pocket money, not amounts that force friends to borrow.</small></span></label></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-top"><div><a class="brand footer-brand" href="#home"><span class="brand-mark">S</span><span><strong>ShilingiLab</strong><small>Youth edition</small></span></a><p>A peer-led financial literacy project for Kenyan youth. No financial jargon, just real mental models.</p></div><nav aria-label="Footer navigation"><a href="#home">Explore Hub</a><a href="#simulator">M-Pesa Simulator</a><a href="#comparison">Chama Circles</a><a href="#stories">Pocket Sandbox</a></nav></div><div class="footer-bottom"><span>© 2026 ShilingiLab Collective. Built with pride in Nairobi.</span><span>Strictly educational · Zero commercial promotions</span></div></footer>
 </body>
 </html>
