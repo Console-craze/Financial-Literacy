@@ -88,6 +88,12 @@ menuButton.addEventListener('click', () => {
 
 navigation.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
+    navigation.querySelectorAll('a').forEach((item) => {
+      item.classList.remove('nav-active');
+      item.removeAttribute('aria-current');
+    });
+    link.classList.add('nav-active');
+    link.setAttribute('aria-current', 'location');
     navigation.classList.remove('is-open');
     menuButton.setAttribute('aria-expanded', 'false');
     menuButton.setAttribute('aria-label', 'Open navigation');
