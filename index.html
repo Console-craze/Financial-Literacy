@@ -4,67 +4,121 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f1fcf1">
-  <meta name="description" content="Explore how Kenyan chamas pool money, build trust, and grow collective wealth with this interactive financial literacy guide.">
-  <title>ShilingiLab — Chama &amp; Collective Wealth</title>
+  <meta name="description" content="Practice smart school-term budgeting with an interactive Kenyan pocket-money simulator.">
+  <title>ShilingiLab — Pocket Money Sandbox</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="budget.css">
+  <script src="budget.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="ShilingiLab home"><span class="brand-mark">S</span><span><strong>ShilingiLab</strong><small>Financial thinking for Kenya</small></span></a>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="#home">Explore Hub</a><a href="#simulator">M-Pesa &amp; Debt</a><a class="nav-active" href="#simulator" aria-current="location">Chama &amp; Collective</a><a href="#stories">Pocket Money Sandbox</a>
+    <a class="brand" href="index.html#home" aria-label="ShilingiLab home">
+      <span class="brand-mark" aria-hidden="true">S</span>
+      <span><strong>ShilingiLab</strong><small>Nairobi teen alpha</small></span>
+    </a>
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+      <a href="index.html#home">Explore Hub</a>
+      <a href="index.html#leak-detector">M-Pesa &amp; Debt</a>
+      <a href="chama.html">Chama &amp; Collective</a>
+      <a class="nav-active" href="index.html#home" aria-current="page">Pocket Money Sandbox</a>
     </nav>
-    <div class="header-actions"><button class="search-button" type="button" aria-label="Search this learning guide">⌕ <span>Bonga Search</span></button><span class="currency">KES <b>KSh</b></span><div class="profile-button"><span class="avatar" aria-hidden="true">T</span><span>Trevor.M<small>Grade 10 · Rockfield Zone</small></span></div></div>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <div class="header-actions">
+      <button class="search-button" id="search-button" type="button" aria-label="Search this learning guide"><span class="search-glyph" aria-hidden="true"></span><span>Bonga Search</span></button>
+      <span class="currency">KES <b>KSh</b></span>
+      <div class="profile-button"><span class="avatar" aria-hidden="true">T</span><span>Trevor.M<small>Grade 10 · Rockfield Zone</small></span></div>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation"><span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span></button>
   </header>
-  <div class="announcement"><span>✳ Mental Model Sandbox: Peer-tested financial heuristics for East African realities</span><span class="announcement-status"><i></i> Live simulator active <b>·</b> Term 2 spending tracker</span></div>
+  <div class="announcement">
+    <span>✳ Mental Model Sandbox: Peer-tested financial heuristics for East African realities</span>
+    <span class="announcement-status"><i aria-hidden="true"></i> Live simulator active <b>·</b> Term 2 spending tracker</span>
+  </div>
+
   <main class="container" id="home">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#home">Home</a><span>›</span><a href="#comparison">Deep Dives</a><span>›</span><strong>Chama Dynamics</strong></nav>
-    <section class="hero">
-      <div class="hero-copy"><span class="eyebrow">♧ Kenyan communal wealth protocol</span><h1>The Anatomy of a Chama: How Social Trust Built Kenya’s Economy</h1><p>Your mother meets her friends every last Sunday of the month with a ledger notebook. Here is the mathematical and human engine driving table banking, merry-go-rounds, and pooled capital.</p><div class="trust-pills"><span>◉ Collective Collateral</span><span>↻ 100% Interest Recirculation</span><span>♧ Youth Tested</span></div></div>
-      <aside class="macro-card"><span class="overline">Macro reality</span><strong>KES 300B+</strong><p>Estimated capital held and cycled annually in Kenyan registered and informal chamas—roughly 30% of total national household savings.</p><div class="source">Source: Kenya National Federation <span>◉</span></div></aside>
-    </section>
-    <section class="simulator panel" id="simulator" aria-labelledby="sim-title">
-      <div class="section-heading simulator-heading"><div><span class="section-kicker">Simulator lab</span><h2 id="sim-title">Interactive Chama Lifecycle Engine</h2><p>Click each stage to toggle money flow vectors, member payouts, and interest loops.</p></div><span class="live-badge"><i></i> Simulation: 10 members · KES 2,000 / mo</span></div>
-      <div class="stage-tabs" role="tablist" aria-label="Chama lifecycle stages">
-        <button class="stage-tab active" id="stage-tab-1" role="tab" aria-controls="stage-panel" aria-selected="true" tabindex="0" data-stage="1"><small>Stage 1</small>Pooling (Umoja)</button>
-        <button class="stage-tab" id="stage-tab-2" role="tab" aria-controls="stage-panel" aria-selected="false" tabindex="-1" data-stage="2"><small>Stage 2</small>Merry-Go-Round</button>
-        <button class="stage-tab" id="stage-tab-3" role="tab" aria-controls="stage-panel" aria-selected="false" tabindex="-1" data-stage="3"><small>Stage 3</small>Table Banking</button>
-        <button class="stage-tab" id="stage-tab-4" role="tab" aria-controls="stage-panel" aria-selected="false" tabindex="-1" data-stage="4"><small>Stage 4</small>Social Collateral</button>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html#home">Home</a><span>›</span><a href="#telemetry">Sandboxes</a><span>›</span><strong>Pocket Money &amp; Hustle</strong></nav>
+        <div class="hero-badges"><span class="badge badge-mint">Decision simulator v2.4</span><span class="badge badge-terra">Real Kenyan high school dynamics</span></div>
+        <h1 id="page-title">The Term Budget Sandbox: Can Your <span>KES 3,500</span> Survive 13 Weeks?</h1>
+        <p>Between the school canteen mandazis, weekend movie data bundles, cyber café printing fees, and sudden rainy-evening matatu fare surges—every shilling has a mission. Try realistic Nairobi scenarios before term begins.</p>
       </div>
-      <div class="simulator-grid">
-        <div class="network-card"><svg class="network" viewBox="0 0 400 400" role="img" aria-label="Ten chama members connected to a shared central fund">
-          <g class="connectors" aria-hidden="true"><line x1="200" y1="200" x2="200" y2="50"/><line x1="200" y1="200" x2="288" y2="78"/><line x1="200" y1="200" x2="342" y2="153"/><line x1="200" y1="200" x2="342" y2="247"/><line x1="200" y1="200" x2="288" y2="322"/><line x1="200" y1="200" x2="200" y2="350"/><line x1="200" y1="200" x2="112" y2="322"/><line x1="200" y1="200" x2="58" y2="247"/><line x1="200" y1="200" x2="58" y2="153"/><line x1="200" y1="200" x2="112" y2="78"/></g>
-          <circle class="pot-ring" cx="200" cy="200" r="63"/><circle class="pot" cx="200" cy="200" r="54"/><text class="pot-label" x="200" y="194">CENTRAL POT</text><text class="pot-value" id="pot-value" x="200" y="216">KES 20,000</text>
-          <g class="member active-member" transform="translate(200 50)"><circle r="20"/><text y="4">M1</text></g><g class="member" transform="translate(288 78)"><circle r="18"/><text y="4">M2</text></g><g class="member" transform="translate(342 153)"><circle r="18"/><text y="4">M3</text></g><g class="member" transform="translate(342 247)"><circle r="18"/><text y="4">M4</text></g><g class="member" transform="translate(288 322)"><circle r="18"/><text y="4">M5</text></g><g class="member" transform="translate(200 350)"><circle r="18"/><text y="4">M6</text></g><g class="member" transform="translate(112 322)"><circle r="18"/><text y="4">M7</text></g><g class="member" transform="translate(58 247)"><circle r="18"/><text y="4">M8</text></g><g class="member" transform="translate(58 153)"><circle r="18"/><text y="4">M9</text></g><g class="member" transform="translate(112 78)"><circle r="18"/><text y="4">M10</text></g>
-        </svg><p class="diagram-note" id="stage-indicator">↔ Month 1: All 10 send KES 2,000 into the pool</p></div>
-        <div class="stage-details" id="stage-panel" role="tabpanel" aria-labelledby="stage-tab-1" tabindex="0"><article class="stage-description"><span class="stage-badge" id="stage-badge">Stage 1: Pooling mechanics</span><h3 id="stage-title">Umoja: The Power of Aggregation</h3><p id="stage-description">Individually, saving KES 2,000 a month feels painfully slow. Ten friends commit to the same goal, creating an instant lump sum of KES 20,000 every 30 days. No bank bureaucracy, zero account ledger maintenance fees.</p></article>
-          <div class="stats"><article><span>Individual burden</span><strong id="burden">KES 2,000/mo</strong><small>Predictable outlay</small></article><article><span>Capital power</span><strong id="power">KES 20,000</strong><small>Single recipient/cycle</small></article></div>
-          <article class="lesson"><strong>☼ Mental Model: “Forced Discipline”</strong><p id="lesson">Saving solo on M-Pesa is risky because Fuliza or temptation strikes easily. A Chama acts as a human smart-contract: missing a payment means letting down 9 real peers.</p></article>
+      <div class="hero-actions">
+        <button class="button button-light" id="reset-sim-btn" type="button">Reset simulation</button>
+        <button class="button button-primary" id="save-play-btn" type="button">Save strategy</button>
+      </div>
+    </section>
+
+    <section class="telemetry panel" id="telemetry" aria-labelledby="telemetry-title">
+      <div class="telemetry-heading">
+        <div>
+          <div class="eyebrow-row"><span class="live-dot" aria-hidden="true"></span><h2 id="telemetry-title">Live term telemetry</h2><span class="dot-separator">•</span><span class="week-label" id="term-week-label">Week 4 of 13 (Term 2)</span></div>
+          <p>Real-time projections update when you make a choice below.</p>
+        </div>
+        <div class="mode-switch" role="group" aria-label="School schedule">
+          <button class="mode-button selected" id="mode-boarding" type="button" aria-pressed="true">Boarding school term</button>
+          <button class="mode-button" id="mode-dayscholar" type="button" aria-pressed="false">Day scholar commute</button>
         </div>
       </div>
-    </section>
-    <section class="content-section" id="comparison"><div class="section-heading"><div><span class="section-kicker">Decision heuristic</span><h2>Chama vs Commercial Bank vs Ponzi Trap</h2><p>Spot the crucial difference between legitimate community-backed mutual wealth and algorithmic WhatsApp scam groups targeting teens.</p></div></div>
-      <div class="comparison-grid">
-        <article class="comparison-card"><header><span class="category-tag mint">Social trust</span><span class="card-symbol">♧</span></header><h3>Merry-Go-Round &amp; Table Bank</h3><p>Built on kinship, classmates, church fellowship, or neighborhood business owners.</p><ul><li><b>Collateral:</b> Character, peer reputation, and social guarantee.</li><li><b>Interest flow:</b> 100% of micro-loan interest stays inside and gets shared back.</li><li><b>Transparency:</b> Physical notebook or WhatsApp PDF visible to all at Sunday meetings.</li><li><b>Safety net:</b> Compassionate extensions for genuine emergencies.</li></ul><div class="verdict"><b>Teen verdict</b>Ideal for shared tools, school supplies, or business seed cash.</div></article>
-        <article class="comparison-card"><header><span class="category-tag neutral">Formal system</span><span class="card-symbol">⌂</span></header><h3>Commercial Bank / Micro-Lender</h3><p>Centralized financial institutions regulated by CBK, driven by institutional credit scoring.</p><ul><li><b>Collateral:</b> Fixed assets, guarantors, or credit history.</li><li><b>Interest flow:</b> Interest supports the institution and its shareholders.</li><li><b>Transparency:</b> Automated digital statements and documented terms.</li><li><b>Safety net:</b> Formal repayment terms and customer protections.</li></ul><div class="verdict"><b>Teen verdict</b>Necessary for custody of large sums once age and needs fit.</div></article>
-        <article class="comparison-card scam-card"><header><span class="category-tag red">Scam alert</span><span class="card-symbol">△</span></header><h3>TikTok &amp; WhatsApp “Matrix” Ponzi</h3><p>Predatory pyramid schemes masquerading as “Youth Empowerment Groups” and instant Forex circles.</p><ul><li><b>Red flag:</b> KES 1,000 turns into KES 4,000 in days guaranteed.</li><li><b>Red flag:</b> No business, product, or verifiable activity.</li><li><b>Red flag:</b> Recruit others to “unlock payout.”</li><li><b>The math:</b> Newcomers’ money pays earlier participants.</li></ul><div class="verdict warning"><b>Defensive rule</b>If returns exceed 15% monthly with no physical trade, it’s a theft trap.</div></article>
+      <div class="metrics-grid">
+        <article class="metric-card"><div class="metric-top"><span>Remaining wallet</span><span class="metric-indicator wallet-indicator" aria-hidden="true"></span></div><div class="metric-value"><small>KES</small><strong id="wallet-display">2,400</strong></div><div class="meter-track"><span id="wallet-progress-bar" style="width:69%"></span></div><p class="metric-foot">↘ Started: KES 3,500</p></article>
+        <article class="metric-card"><div class="metric-top"><span>Social morale / vibes</span><span class="metric-indicator morale-indicator" aria-hidden="true"></span></div><div class="metric-value"><strong id="morale-display">85</strong><small>%</small></div><div class="meter-track terra-track"><span id="morale-progress-bar" style="width:85%"></span></div><p class="metric-foot"><b>Good</b> · Squad ties intact</p></article>
+        <article class="metric-card"><div class="metric-top"><span>Academic readiness</span><span class="metric-indicator academic-indicator" aria-hidden="true"></span></div><div class="metric-value"><strong id="academic-display">90</strong><small>%</small></div><div class="meter-track dark-track"><span id="academic-progress-bar" style="width:90%"></span></div><p class="metric-foot"><b>Excellent</b> · Printing &amp; stationery clear</p></article>
+        <article class="metric-card"><div class="metric-top"><span>Emergency vault</span><span class="metric-indicator vault-indicator" aria-hidden="true"></span></div><div class="metric-value"><small>KES</small><strong id="buffer-display">500</strong></div><div class="meter-track mint-track"><span style="width:100%"></span></div><p class="metric-foot mint-foot">Protected fare / medical reserve</p></article>
       </div>
     </section>
-    <section class="content-section" id="stories"><div class="section-heading"><div><span class="section-kicker">Applied field notes</span><h2>Real High School Hustle Chamas</h2><p>How Kenyan students apply collective table-banking to launch equipment-heavy creative side hustles.</p></div></div>
-      <div class="stories-grid">
-        <article class="story-card"><div class="story-copy"><span class="case-label">Case 01</span><span class="story-school">St. Mary’s Boys · Form 3</span><h3>The Lens &amp; Lighting Micro-Chama</h3><p>Four day-scholars passionate about sports photography couldn’t afford a Canon lens alone.</p></div><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVwmbCzPxHiEC_sj96Vjgt72qAOZrfBc0KrujmDFHofGzTT6ayXZVpEu7Ks5Rn9uIKqMrYz5rwRo2NIR-9jIdYO5967Y2vuC-xAagLVavdJOFJbe3k4erKAGVa07eEgujMdjPd9y0aOVUqOEU6jUsyxiQ1plwMrGSfqYW253uWyb1xWWWlIOHNedWZGuiyCZarcWIG3XXemv8F1S0ifhX4BMuL63hBb6XP89mN7FbI" alt="Students collaborating around a camera for their school photography chama" loading="lazy"><div class="story-data"><p><span>Monthly contribution</span><b>KES 500 per boy</b></p><p><span>Duration to purchase</span><b>8 months (2 terms)</b></p><p><span>Revenue generated</span><b>KES 3,500/weekend</b></p><div class="story-rule"><b>The Chama Rule:</b> Equipment stays in the school art club locker during weekdays. Weekend rental fees go directly to the maintenance fund.</div></div></article>
-        <article class="story-card"><div class="story-copy"><span class="case-label">Case 02</span><span class="story-school">Precious Blood Riruta · Form 4</span><h3>Grace’s KCSE Revision &amp; Toner Ring</h3><p>Mock papers and past national examination booklets cost KES 300 to KES 800 per subject.</p></div><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl4yqx-rskGWdBpo6OlxP4yTtI9tdhYI5EaCav2aWmnyzpM4tcEch7KY7uGum4Zv58eWQvCWX8uVUpAMuH9ssmcxSxNLYvDBJ4amyvvRDzcAkekAlEDIPR_LfvsgPDZqLWAstKzm6j3zw35uunk8CHVuszKwWNl8r_mVVa-xGXIEY_I0uwug6-ZL6BH8hpg9yuNVw__RaEDKnQgJ-NEgTPhlRfTLCbFupRfyOOPu44" alt="Two students studying together with revision papers and shared supplies" loading="lazy"><div class="story-data"><p><span>Weekly contribution</span><b>KES 100 per member</b></p><p><span>Pooled strategy</span><b>Shared mock papers and toner</b></p><p><span>End of term surplus</span><b>KES 2,400 split equally</b></p><div class="story-rule"><b>The Chama Rule:</b> Two members validate every purchase slip whenever paper or ink is bought.</div></div></article>
+
+    <div class="content-grid">
+      <div class="content-column">
+        <section class="scenario panel" aria-labelledby="scenario-title">
+          <div class="section-meta"><div><span class="badge badge-soft">Week 4 challenge</span><span class="remaining-label">9 weeks remaining</span></div><span class="midterm">Mid-term in sight</span></div>
+          <article class="challenge-card"><div class="challenge-icon" aria-hidden="true">!</div><div><h2 id="scenario-title">The Tuckshop Temptation &amp; Urgent Project Deadline</h2><p>Your History teacher just announced a mandatory 20-page group dossier requiring cyber café color printing and spiral binding (<strong>KES 200</strong>). At the 4:15 PM bell, your squad heads to the canteen for samosas, queen cakes, and passion juice (<strong>KES 150</strong>).</p><span class="challenge-note">Note: Free dining hall tea &amp; bread is available in 30 minutes.</span></div></article>
+          <div class="decision-list" role="group" aria-label="Choose your budget decision">
+            <h3>Choose your move:</h3>
+            <button class="decision-card" type="button" data-choice="A"><span class="choice-letter">A</span><span class="decision-copy"><strong>Pay printing first, skip canteen, drink dining hall tea.</strong><span class="choice-tags"><i class="tag-loss">− KES 200</i><i class="tag-gain">+15 Academics</i><i>−5 Morale</i><em>“Safe play, pure survival.”</em></span></span><span class="arrow" aria-hidden="true">→</span></button>
+            <button class="decision-card" type="button" data-choice="B"><span class="choice-letter terra-choice">B</span><span class="decision-copy"><strong>Do both! Print clean and feast with the squad. Life is short.</strong><span class="choice-tags"><i class="tag-loss">− KES 350</i><i class="tag-gain">+15 Academics</i><i class="tag-social">+20 Morale</i><em class="risk-text">High risk: dry pockets by Week 10!</em></span></span><span class="arrow" aria-hidden="true">→</span></button>
+            <button class="decision-card" type="button" data-choice="C"><span class="choice-letter mint-choice">C</span><span class="decision-copy"><strong>Handwrite neatly with a partner, buy one samosa (KES 50).</strong><span class="choice-tags"><i class="tag-loss">− KES 50</i><i>+5 Academics</i><i class="tag-gain">+10 Morale</i><em>Hustler’s compromise!</em></span></span><span class="arrow" aria-hidden="true">→</span></button>
+          </div>
+          <div class="decision-feedback" id="decision-feedback" hidden aria-live="polite"><span id="feedback-icon" aria-hidden="true">✓</span><div><strong id="feedback-title">Decision applied</strong><p id="feedback-desc">Your term cash balance and morale metrics have updated.</p></div></div>
+        </section>
+
+        <section class="hustle panel" aria-labelledby="hustle-title">
+          <div class="section-heading"><span class="section-icon" aria-hidden="true">+</span><div><h2 id="hustle-title">The Nairobi Teen Hustle Fork</h2><p>Turn pocket capital into self-sustaining school revenue.</p></div><span class="badge badge-mint">Optional side gig</span></div>
+          <div class="hustle-grid">
+            <article class="hustle-card"><div><div class="hustle-title"><h3>Kariokor Beadwork Kits</h3><span class="roi">ROI: +85%</span></div><p>Buy bead strings and clips at Kariokor market (KES 800). Craft 20 wristbands customized with dorm names. Sell at KES 100 each.</p></div><div class="hustle-bottom"><div><span>Cost: <b>KES 800</b></span><strong>Net profit: +KES 1,200</strong></div><button class="hustle-button" id="invest-beads-btn" type="button">Execute seed capital (−800)</button></div></article>
+            <article class="hustle-card"><div><div class="hustle-title"><h3>Canva Club Posters &amp; Prints</h3><span class="roi roi-terra">ROI: +50%</span></div><p>Invest in data bundles and cyber café laminating to design sports-day flyers and dorm birthday shoutout cards.</p></div><div class="hustle-bottom"><div><span>Cost: <b>KES 400</b></span><strong>Net profit: +KES 600</strong></div><button class="hustle-button secondary-hustle" id="invest-flyer-btn" type="button">Try design gig (−400)</button></div></article>
+          </div>
+        </section>
+      </div>
+
+      <aside class="content-column side-column">
+        <section class="leak panel" id="leak-detector" aria-labelledby="leak-title">
+          <div class="leak-heading"><span class="drop-icon" aria-hidden="true">!</span><h2 id="leak-title">The Kenyan “Leak” Detector</h2><span>Term math (13 wks)</span></div>
+          <p>A small daily twenty- or forty-bob drop looks harmless on Monday morning. By midterm, it can silently wipe out an entire term’s savings:</p>
+          <div class="leak-list">
+            <article class="leak-row"><span class="leak-symbol" aria-hidden="true">M</span><div><strong>1 Mandazi + Chai / Day</strong><small>KES 40 per school day</small></div><div class="leak-total"><strong>−KES 3,600</strong><small>Full pocket allowance!</small></div></article>
+            <article class="leak-row"><span class="leak-symbol wifi-symbol" aria-hidden="true">D</span><div><strong>Daily 20MB “Tunukiwa” bundle</strong><small>KES 20 evening check-in</small></div><div class="leak-total"><strong>−KES 1,800</strong><small>51% of total capital</small></div></article>
+            <article class="leak-row"><span class="leak-symbol bus-symbol" aria-hidden="true">F</span><div><strong>Rainy-day matatu surge</strong><small>KES 50 sudden fare hike × 24</small></div><div class="leak-total"><strong>−KES 1,200</strong><small>34% of total capital</small></div></article>
+          </div>
+          <div class="leak-summary"><div><span>Combined invisible leakage:</span><strong>KES 6,600</strong></div><span class="over-budget">Exceeds 1.8× budget</span></div>
+        </section>
+        <article class="field-note"><img src="assets/kenyan-student-budgeting.png" alt="Three Kenyan high school students sharing a budget conversation outside school" loading="lazy"><div class="field-note-copy"><span>Field note · Nairobi East</span><p>“We noticed students who split canteen snacks into groups saved KES 1,400 per term without missing out on social hangouts.”</p></div></article>
+      </aside>
+    </div>
+
+    <section class="playbook panel" id="playbook" aria-labelledby="playbook-title">
+      <div class="section-heading playbook-heading"><div><span class="section-kicker">Street-smart mental models</span><h2 id="playbook-title">The High School Survival Playbook</h2></div><span class="badge badge-soft">3 tested heuristics</span></div>
+      <div class="playbook-grid">
+        <article class="rule-card"><span class="rule-number">1</span><h3>The 24-Hour Canteen Rule</h3><p>Never buy tuckshop snacks during the first 15 minutes after sports or prep bell, when appetite peaks. Wait. If you still crave a samosa after supper, buy half. Many cravings pass after a cup of hot water.</p><strong>◎ Saves ~KES 900 / term</strong></article>
+        <article class="rule-card"><span class="rule-number">2</span><h3>Split Supplies from Pleasure</h3><p>Set aside KES 800 for printing, exam clipboards, and extra pens as soon as you receive pocket money. Keep essential school costs separate from snack money.</p><strong>◎ Zero exam-prep panic</strong></article>
+        <article class="rule-card"><span class="rule-number">3</span><h3>The Unlendable KES 200 Buffer</h3><p>Keep a small emergency reserve for direct fare home or medical needs. Agree on a kind, clear phrase when friends ask to borrow it: “Niko na fare ya kwenda home pekee.”</p><strong>◎ Protects transit safety</strong></article>
       </div>
     </section>
-    <section class="audit" aria-labelledby="audit-title"><div class="audit-intro"><span class="section-kicker">Interactive audit</span><h2 id="audit-title">Could You Run a Youth Chama?</h2><p>Social trust is not sentiment; it is rigorous procedure. Tick all 4 pillars to see if your group is ready to pool shilingis without falling out.</p><div class="readiness"><div><span>Group readiness score</span><strong id="score-text">0 / 4 Checked</strong></div><div class="progress-track"><span id="readiness-progress"></span></div><p id="score-feedback" aria-live="polite">Check the protocols to evaluate readiness.</p></div></div>
-      <div class="checklist"><label class="check-item"><input class="chama-check" type="checkbox"><span><b>1. Written &amp; Signed Constitution</b><small>Every member agrees on contribution dates, cycle order, and late-payment rules—in writing.</small></span></label><label class="check-item"><input class="chama-check" type="checkbox"><span><b>2. The 2-Person Dual Sign-off</b><small>Funds are never held on one person’s line. Two trusted members verify every balance.</small></span></label><label class="check-item"><input class="chama-check" type="checkbox"><span><b>3. The Emergency Default Clause</b><small>Agree what happens when pocket money is delayed: a grace period or emergency reserve.</small></span></label><label class="check-item"><input class="chama-check" type="checkbox"><span><b>4. Realistic Contribution Threshold</b><small>Set contributions that fit real pocket money, not amounts that force friends to borrow.</small></span></label></div>
-    </section>
+
+    <section class="trajectory panel" aria-labelledby="trajectory-title"><div class="trajectory-heading"><h2 id="trajectory-title">Term Survival Trajectory</h2><span>Goal: Reach Week 13 with KES 400+ for closing-day fare</span></div><ol class="timeline"><li class="complete"><span>✓</span><b>Week 1–3</b><small>Kit set up</small></li><li class="current"><span>4</span><b>Week 4–6</b><small>Tuckshop surge</small></li><li><span>7</span><b>Week 7–9</b><small>Midterm tests</small></li><li><span>13</span><b>Week 10–13</b><small>Closing rush</small></li></ol></section>
   </main>
-  <footer class="site-footer"><div class="footer-top"><div><a class="brand footer-brand" href="#home"><span class="brand-mark">S</span><span><strong>ShilingiLab</strong><small>Youth edition</small></span></a><p>A peer-led financial literacy project for Kenyan youth. No financial jargon, just real mental models.</p></div><nav aria-label="Footer navigation"><a href="#home">Explore Hub</a><a href="#simulator">M-Pesa Simulator</a><a href="#comparison">Chama Circles</a><a href="#stories">Pocket Sandbox</a></nav></div><div class="footer-bottom"><span>© 2026 ShilingiLab Collective. Built with pride in Nairobi.</span><span>Strictly educational · Zero commercial promotions</span></div></footer>
+
+  <footer class="site-footer"><div class="footer-main"><div><a class="brand footer-brand" href="index.html#home"><span class="brand-mark" aria-hidden="true">S</span><span><strong>ShilingiLab</strong><small>Youth edition</small></span></a><p>A peer-led financial literacy project for Kenyan youth. No financial jargon, just real mental models.</p></div><nav aria-label="Footer navigation"><a href="index.html#home">Explore Hub</a><a href="index.html#leak-detector">M-Pesa Simulator</a><a href="chama.html">Chama Circles</a><a href="index.html#home">Pocket Sandbox</a></nav></div><div class="footer-bottom"><span>© 2026 ShilingiLab Collective. Built with pride in Nairobi.</span><span>Strictly educational · Zero commercial promotions</span></div></footer>
 </body>
 </html>
