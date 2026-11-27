@@ -48,7 +48,7 @@ document.querySelectorAll('.decision-card').forEach((button) => {
     state.wallet = Math.max(0, state.wallet - choice.cost);
     state.academic = Math.min(100, state.academic + choice.academics);
     state.morale = Math.max(0, Math.min(100, state.morale + choice.morale));
-    updateDashboard();
+updateDashboard();
     showFeedback(choice.title, choice.message, choice.icon);
   });
 });
@@ -151,3 +151,53 @@ document.querySelector('#search-button').addEventListener('click', () => {
 });
 
 updateDashboard();
+
+const moneyCalculatorForm = document.querySelector('#money-calculator-form');
+const pocketMoneyInput = document.querySelector('#pocket-money-amount');
+const allocationOutputs = {
+  needs: document.querySelector('#needs-amount'),
+  savings: document.querySelector('#savings-amount'),
+  spending: document.querySelector('#spending-amount'),
+  sharing: document.querySelector('#sharing-amount')
+};
+const allocationTotal = document.querySelector('#allocation-total');
+const formatKes = (amount) => `KES ${amount.toLocaleString('en-KE')}`;
+
+moneyCalculatorForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (!pocketMoneyInput.reportValidity()) return;
+
+  const amount = Number(pocketMoneyInput.value);
+  if (!Number.isSafeInteger(amount) || amount < 1 || amount > 1000000) {
+    pocketMoneyInput.setCustomValidity('Enter a whole amount between KES 1 and KES 1,000,000.');
+    pocketMoneyInput.reportValidity();
+    pocketMoneyInput.setCustomValidity('');
+    return;
+  }
+
+  const split = {
+    needs: Math.round(amount * 0.5),
+    savings: Math.round(amount * 0.2),
+    spending: Math.round(amount * 0.2)
+  };
+  split.sharing = amount - split.needs - split.savings - split.spending;
+  Object.entries(split).forEach(([category, value]) => {
+    allocationOutputs[category].textContent = formatKes(value);
+  });
+  allocationTotal.textContent = formatKes(Object.values(split).reduce((sum, value) => sum + value, 0));
+});
+
+const moneyQuizForm = document.querySelector('#money-quiz-form');
+const quizResult = document.querySelector('#quiz-result');
+moneyQuizForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const answers = ['b', 'a', 'a'];
+  const score = answers.reduce((total, answer, index) => {
+    return total + (moneyQuizForm.querySelector(`input[name="quiz-${index + 1}"]:checked`)?.value === answer ? 1 : 0);
+  }, 0);
+  quizResult.textContent = score === answers.length
+    ? `Great job — ${score} out of ${answers.length} correct. You’re ready to give every shilling a plan!`
+    : `You got ${score} out of ${answers.length} correct. Review the choices and try again — saving early and protecting emergency money are smart moves.`;
+  quizResult.dataset.state = score === answers.length ? 'success' : 'retry';
+  quizResult.hidden = false;
+});

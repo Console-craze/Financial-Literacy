@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="budget.css">
-  <script src="budget.js" defer></script>
+  <link rel="stylesheet" href="budget.css?v=money-tools">
+  <script src="budget.js?v=money-tools" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -67,6 +67,35 @@
         <article class="metric-card"><div class="metric-top"><span>Academic readiness</span><span class="metric-indicator academic-indicator" aria-hidden="true"></span></div><div class="metric-value"><strong id="academic-display">90</strong><small>%</small></div><div class="meter-track dark-track"><span id="academic-progress-bar" style="width:90%"></span></div><p class="metric-foot"><b>Excellent</b> · Printing &amp; stationery clear</p></article>
         <article class="metric-card"><div class="metric-top"><span>Emergency vault</span><span class="metric-indicator vault-indicator" aria-hidden="true"></span></div><div class="metric-value"><small>KES</small><strong id="buffer-display">500</strong></div><div class="meter-track mint-track"><span style="width:100%"></span></div><p class="metric-foot mint-foot">Protected fare / medical reserve</p></article>
       </div>
+    </section>
+
+    <section class="money-lab" aria-label="Pocket money calculator and quiz">
+      <section class="money-tool panel" aria-labelledby="money-calculator-title">
+        <div class="section-heading"><span class="section-icon" aria-hidden="true">KSh</span><div><h2 id="money-calculator-title">Split your pocket money</h2><p>Give every shilling a job before you spend it.</p></div></div>
+        <form id="money-calculator-form" class="money-calculator-form">
+          <label for="pocket-money-amount">How much pocket money did you get? <span>(KES)</span></label>
+          <div class="amount-entry"><input id="pocket-money-amount" name="amount" type="number" min="1" max="1000000" step="1" value="3500" required inputmode="numeric" aria-describedby="allocation-note"><button class="button button-primary" type="submit">Split money</button></div>
+          <p id="allocation-note" class="allocation-note">A starter guide: 50% needs, 20% savings, 20% spending, and 10% sharing.</p>
+        </form>
+        <div class="allocation-results" id="allocation-results" aria-live="polite" aria-label="Suggested pocket money split">
+          <div class="allocation-row"><span class="allocation-swatch needs-swatch" aria-hidden="true"></span><span><strong>Needs &amp; school</strong><small>50% · essentials first</small></span><b id="needs-amount">KES 1,750</b></div>
+          <div class="allocation-row"><span class="allocation-swatch savings-swatch" aria-hidden="true"></span><span><strong>Savings</strong><small>20% · future you</small></span><b id="savings-amount">KES 700</b></div>
+          <div class="allocation-row"><span class="allocation-swatch spending-swatch" aria-hidden="true"></span><span><strong>Spending</strong><small>20% · treats &amp; fun</small></span><b id="spending-amount">KES 700</b></div>
+          <div class="allocation-row"><span class="allocation-swatch sharing-swatch" aria-hidden="true"></span><span><strong>Sharing</strong><small>10% · gifts or giving</small></span><b id="sharing-amount">KES 350</b></div>
+          <div class="allocation-total"><span>Total assigned</span><strong id="allocation-total">KES 3,500</strong></div>
+        </div>
+      </section>
+
+      <section class="money-tool panel" aria-labelledby="money-quiz-title">
+        <div class="section-heading"><span class="section-icon quiz-icon" aria-hidden="true">?</span><div><h2 id="money-quiz-title">Quick money quiz</h2><p>Three quick questions to test your money moves.</p></div></div>
+        <form id="money-quiz-form" class="money-quiz-form">
+          <fieldset class="quiz-question"><legend>1. When is a good time to save?</legend><label><input type="radio" name="quiz-1" value="a"> Only if there is money left at term end</label><label><input type="radio" name="quiz-1" value="b"> Set some aside when you receive your money</label></fieldset>
+          <fieldset class="quiz-question"><legend>2. What is an emergency fund for?</legend><label><input type="radio" name="quiz-2" value="a"> A surprise fare or medical need</label><label><input type="radio" name="quiz-2" value="b"> Everyday snacks with friends</label></fieldset>
+          <fieldset class="quiz-question"><legend>3. If you get KES 1,000, what is 20% savings?</legend><label><input type="radio" name="quiz-3" value="a"> KES 200</label><label><input type="radio" name="quiz-3" value="b"> KES 500</label></fieldset>
+          <button class="button button-primary" type="submit">Check my answers</button>
+          <p id="quiz-result" class="quiz-result" aria-live="polite" hidden></p>
+        </form>
+      </section>
     </section>
 
     <div class="content-grid">
